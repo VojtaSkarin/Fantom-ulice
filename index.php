@@ -31,4 +31,4 @@ $_SESSION['kredity'] = 200;
 $_SESSION['vybaveni'] = array();
 ?>
 
-<a href="/content/1.php">Začít</a>
+<a href="content/1.php">Začít</a>
