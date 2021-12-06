@@ -1,0 +1,69 @@
+div.header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 150%;
+}
+
+div.text {
+	max-width: 380px;
+	margin: auto;
+	text-align: justify;
+}
+
+div.link {
+	max-width: 380px;
+	margin: auto;
+	margin-top: 5px;
+}
+
+div.stats {
+	max-width: 380px;
+	margin: auto;
+	margin-top: 2rem;
+}
+
+img.medkit {
+	width: 1.5rem;
+	margin: 1px;
+	position:relative;
+	top: 6px;
+}
+
+img.credit {
+	width: 1.5rem;
+	position: relative;
+	top: 6px;
+	left: 3px;
+}
+
+img.rocket {
+	width: 1.5rem;
+	position:relative;
+	top: 8px;
+}
+
+img.nails {
+	width: 1.5rem;
+	position:relative;
+	top: 6px;
+}
+
+img.oil {
+	width: 1.5rem;
+	position:relative;
+	top: 10px;
+}
+
+img.wheel {
+	width: 1.5rem;
+	position:relative;
+	top: 7px;
+	margin-left: 1px;
+}
+
+img.canister {
+	width: 1.5rem;
+	position:relative;
+	top: 6px;
+	margin-left: 1px;
+}
