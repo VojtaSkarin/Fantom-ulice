@@ -22,7 +22,7 @@ echo 'MED-KIT: ';
 $medkit = $_SESSION['medkit'];
 
 for ($i = 0; $i < $medkit; $i++) {
-	echo '<img class="medkit" src="/images/medkit.png">';
+	echo '<img class="medkit" src="../images/medkit.png">';
 }
 
 echo '<br>';
@@ -30,7 +30,7 @@ echo '<br>';
 $kredity = $_SESSION['kredity'];
 
 echo 'KREDITY: ' . $kredity;
-echo '<img class="credit" src="/images/credit.png"><br>';
+echo '<img class="credit" src="../images/credit.png"><br>';
 
 echo '<br>';
 
@@ -51,7 +51,7 @@ $rakety = $_SESSION['rakety'];
 echo 'RAKETY: ';
 
 for ($i = 0; $i < $rakety; $i++) {
-	echo '<img class="rocket" src="/images/rocket.png">';
+	echo '<img class="rocket" src="../images/rocket.png">';
 }
 
 echo '<br>';
@@ -61,7 +61,7 @@ $bodce = $_SESSION['bodce'];
 echo 'ŽELEZNÉ BODCE: ';
 
 for ($i = 0; $i < $bodce; $i++) {
-	echo '<img class="nails" src="/images/nails.png">';
+	echo '<img class="nails" src="../images/nails.png">';
 }
 
 echo '<br>';
@@ -71,7 +71,7 @@ $olej = $_SESSION['olej'];
 echo 'OLEJ: ';
 
 for ($i = 0; $i < $olej; $i++) {
-	echo '<img class="oil" src="/images/oil.png">';
+	echo '<img class="oil" src="../images/oil.png">';
 }
 
 echo '<br>';
@@ -81,7 +81,7 @@ $kola = $_SESSION['kola'];
 echo 'REZERVNÍ KOLA: ';
 
 for ($i = 0; $i < $kola; $i++) {
-	echo '<img class="wheel" src="/images/wheel.png">';
+	echo '<img class="wheel" src="../images/wheel.png">';
 }
 
 echo '<br>';
@@ -91,7 +91,7 @@ $palivo = $_SESSION['palivo'];
 echo 'PALIVO: ';
 
 for ($i = 0; $i < $palivo; $i++) {
-	echo '<img class="canister" src="/images/canister.png">';
+	echo '<img class="canister" src="../images/canister.png">';
 }
 
 echo '<br><br>';
