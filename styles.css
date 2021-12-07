@@ -1,5 +1,6 @@
-:root {
-	--page-width: 22rem;
+html {
+	font-size: 20;
+	--page-width: 48ch;
 }
 
 div.header {
@@ -19,58 +20,58 @@ div.text {
 div.link {
 	max-width: var(--page-width);
 	margin: auto;
-	margin-top: 0.3rem;
+	margin-top: 0.5ch;
 }
 
 div.stats {
 	max-width: var(--page-width);
 	margin: auto;
-	margin-top: 2rem;
+	margin-top: 4ch;
 }
 
 img.medkit {
-	width: 1.5rem;
-	margin: 0.05rem;
+	width: 3ch;
+	margin: 0.2ch;
 	position: relative;
-	top: 0.35rem;
+	top: 0.7ch;
 }
 
 img.credit {
-	width: 1.5rem;
+	width: 3ch;
 	position: relative;
-	top: 0.35rem;
-	left: 0.15rem;
+	top: 0.7ch;
+	left: 0.5ch;
 }
 
 img.rocket {
-	width: 1.5rem;
+	width: 3ch;
 	position: relative;
-	top: 0.4rem;
+	top: 0.8ch;
 }
 
 img.nails {
-	width: 1.5rem;
+	width: 3ch;
 	position: relative;
-	top: 0.4rem;
+	top: 0.8ch;
 }
 
 img.oil {
-	width: 1.5rem;
+	width: 3ch;
 	position: relative;
-	top: 0.6rem;
-	margin-left: 0.1rem;
+	top: 1.2ch;
+	margin-left: 0.2ch;
 }
 
 img.wheel {
-	width: 1.5rem;
+	width: 3ch;
 	position: relative;
-	top: 0.4rem;
-	margin-left: 0.1rem;
+	top: 0.8ch;
+	margin-left: 0.2ch;
 }
 
 img.canister {
-	width: 1.5rem;
+	width: 3ch;
 	position: relative;
-	top: 0.3rem;
-	margin-left: 0.1rem;
+	top: 0.6ch;
+	margin-left: 0.2ch;
 }
