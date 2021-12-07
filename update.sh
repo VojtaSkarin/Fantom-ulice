@@ -2,6 +2,11 @@
 
 git restore *
 git pull
-sed -i '1 i\
-#!/packages/run/php/bin/php' index.php content/*.php
-chmod u+x index.php content/*.php
+
+for FILE in content/*.php index.php; do
+	if [ "$FILE" != "content/pre.php" ] && [ "$FILE" != "content/post.php" ] && [ "$FILE" != "content/intro.header.php" ]; then
+		sed -i '1 i\
+#!/packages/run/php/bin/php' $FILE
+		chmod u+x $FILE
+	fi
+done
