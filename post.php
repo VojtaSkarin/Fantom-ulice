@@ -107,10 +107,16 @@ for ($i = 0; $i < count($vybaveni); $i++) {
 	}
 	echo $predmet;
 }
+
+if (count($vybaveni) == 0) {
+	echo 'žádné';
+}
 ?>
 </div>
 
 <br><br>
 <div class="text">
-Překlepy, jednopísmenné předložky na konci řádku, chyby a další nedostatky prosím hlaste na xskarou1@fi.muni.cz. Ocením i jakoukoliv zpětnou vazbu.
+<i>Překlepy, jednopísmenné předložky na konci řádku, chyby a další nedostatky prosím hlaste na xskarou1@fi.muni.cz. Ocením i jakoukoliv zpětnou vazbu.</i>
 </div>
+</body>
+</html>

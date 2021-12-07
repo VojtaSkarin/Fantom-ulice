@@ -6,9 +6,18 @@ html {
 div.header {
 	text-align: center;
 	margin: auto;
+	margin-top: 1ch;
 	font-weight: bold;
 	font-size: 150%;
 	max-width: var(--page-width);
+}
+
+div.title {
+	text-align: center;
+	margin: auto;
+	max-width: var(--page-width);
+	margin-top: 1ch;
+	margin-bottom: 1ch;
 }
 
 div.text {
@@ -33,20 +42,20 @@ img.medkit {
 	width: 3ch;
 	margin: 0.2ch;
 	position: relative;
-	top: 0.7ch;
+	top: 0.8ch;
 }
 
 img.credit {
 	width: 3ch;
 	position: relative;
-	top: 0.7ch;
+	top: 0.8ch;
 	left: 0.5ch;
 }
 
 img.rocket {
 	width: 3ch;
 	position: relative;
-	top: 0.8ch;
+	top: 0.9ch;
 }
 
 img.nails {
@@ -65,7 +74,7 @@ img.oil {
 img.wheel {
 	width: 3ch;
 	position: relative;
-	top: 0.8ch;
+	top: 0.9ch;
 	margin-left: 0.2ch;
 }
 
