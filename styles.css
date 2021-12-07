@@ -1,69 +1,76 @@
+:root {
+	--page-width: 22rem;
+}
+
 div.header {
 	text-align: center;
+	margin: auto;
 	font-weight: bold;
 	font-size: 150%;
+	max-width: var(--page-width);
 }
 
 div.text {
-	max-width: 380px;
+	max-width: var(--page-width);
 	margin: auto;
 	text-align: justify;
 }
 
 div.link {
-	max-width: 380px;
+	max-width: var(--page-width);
 	margin: auto;
-	margin-top: 5px;
+	margin-top: 0.3rem;
 }
 
 div.stats {
-	max-width: 380px;
+	max-width: var(--page-width);
 	margin: auto;
 	margin-top: 2rem;
 }
 
 img.medkit {
 	width: 1.5rem;
-	margin: 1px;
-	position:relative;
-	top: 6px;
+	margin: 0.05rem;
+	position: relative;
+	top: 0.35rem;
 }
 
 img.credit {
 	width: 1.5rem;
 	position: relative;
-	top: 6px;
-	left: 3px;
+	top: 0.35rem;
+	left: 0.15rem;
 }
 
 img.rocket {
 	width: 1.5rem;
-	position:relative;
-	top: 8px;
+	position: relative;
+	top: 0.4rem;
 }
 
 img.nails {
 	width: 1.5rem;
-	position:relative;
-	top: 6px;
+	position: relative;
+	top: 0.4rem;
 }
 
 img.oil {
 	width: 1.5rem;
-	position:relative;
-	top: 10px;
+	position: relative;
+	top: 0.6rem;
+	margin-left: 0.1rem;
 }
 
 img.wheel {
 	width: 1.5rem;
-	position:relative;
-	top: 7px;
-	margin-left: 1px;
+	position: relative;
+	top: 0.4rem;
+	margin-left: 0.1rem;
 }
 
 img.canister {
 	width: 1.5rem;
-	position:relative;
-	top: 6px;
-	margin-left: 1px;
+	position: relative;
+	top: 0.3rem;
+	margin-left: 0.1rem;
 }

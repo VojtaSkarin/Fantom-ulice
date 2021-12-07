@@ -112,5 +112,5 @@ for ($i = 0; $i < count($vybaveni); $i++) {
 
 <br><br>
 <div class="text">
-Překlepy, chyby a další nedostatky prosím hlaste na xskarou1@fi.muni.cz
+Překlepy, jednopísmenné předložky na konci řádku, chyby a další nedostatky prosím hlaste na xskarou1@fi.muni.cz. Ocením i jakoukoliv zpětnou vazbu.
 </div>
