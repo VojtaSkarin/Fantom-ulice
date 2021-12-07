@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 ?>
 
 <?php
@@ -23,5 +23,5 @@ Dva dny nato si prohlížíš úpravy na Interceptoru. Když jsou dokončeny, vy
 </div>
 
 <?php
-include '../post.php';
+include 'post.php';
 ?>

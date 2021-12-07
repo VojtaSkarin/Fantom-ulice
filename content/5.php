@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 ?>
 
 <title>
@@ -22,5 +22,5 @@ Přední dveře motelu jsou zamčené a zdá se, že všechna okna jsou zavřen�
 </div>
 
 <?php
-include '../post.php';
+include 'post.php';
 ?>

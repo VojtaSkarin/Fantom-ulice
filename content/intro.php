@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 ?>
 
 <?php
@@ -22,5 +22,5 @@ Později toho dne vypukla v New Yorku záhadná epidemie a&nbspšířila se tak 
 </div>
 
 <?php
-include '../post.php';
+include 'post.php';
 ?>

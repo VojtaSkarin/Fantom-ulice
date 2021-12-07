@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 ?>
 
 <title>
@@ -18,5 +18,5 @@ Fantom ulice - 3
 </div>
 
 <?php
-include '../post.php';
+include 'post.php';
 ?>

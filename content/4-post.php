@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 ?>
 
 <title>
@@ -18,5 +18,5 @@ Opustíš silnici a zaparkuješ Interceptor mezi keři. Když vypneš motor, naj
 </div>
 
 <?php
-include '../post.php';
+include 'post.php';
 ?>

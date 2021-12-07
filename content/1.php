@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 ?>
 
 <title>
@@ -22,5 +22,5 @@ První věc, která tě udeří do očí, když se rozjedeš po silnici, je rych
 </div>
 
 <?php
-include '../post.php';
+include 'post.php';
 ?>

@@ -1,5 +1,5 @@
 <?php
-include 'pre.php';
+session_start();
 
 // Init variables
 $_SESSION['umeni_boje_max'] = rand(1, 6) + 6;
@@ -30,13 +30,20 @@ $_SESSION['kredity'] = 200;
 $_SESSION['vybaveni'] = array();
 ?>
 
+<html>
+<head>
 <title>
 Fantom ulice
 </title>
-
+<link rel="icon" href="ff-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <div class="text">
 Pokrytí hry: 2,1&nbsp%
 </div>
 <div class="link">
 <a href="content/intro.php">Začít</a>
 </div>
+</body>
+</html>

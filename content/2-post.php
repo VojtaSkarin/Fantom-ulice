@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 ?>
 
 <title>
@@ -18,5 +18,5 @@ Běžíš k autu a rychle otevřeš balíček léků z Med-Kitu. Píchneš si s�
 </div>
 
 <?php
-include '../post.php';
+include 'post.php';
 ?>

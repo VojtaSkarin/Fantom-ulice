@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 
 $_SESSION['medkit']--;
 $_SESSION['umeni_boje_ted']--;

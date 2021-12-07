@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 
 $hod = rand(1, 6) + rand(1, 6);
 $stesti_ted = $_SESSION['stesti_ted'];

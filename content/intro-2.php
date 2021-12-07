@@ -1,5 +1,5 @@
 <?php
-include '../pre.php';
+include 'pre.php';
 ?>
 
 <?php
@@ -22,5 +22,5 @@ Jsi jedním z těch šťastných přeživších žijících v opevněném měst�
 </div>
 
 <?php
-include '../post.php';
+include 'post.php';
 ?>
