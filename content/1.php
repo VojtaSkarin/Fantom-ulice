@@ -14,11 +14,11 @@ První věc, která tě udeří do očí, když se rozjedeš po silnici, je rych
 </div>
 
 <div class="link">
-<a href="126.php">Zjistit, co se děje</a>
+<a href="game.php?action=1">Zjistit, co se děje</a>
 </div>
 
 <div class="link">
-<a href="34.php">Odjet z města</a>
+<a href="game.php?action=2">Odjet z města</a>
 </div>
 
 <?php

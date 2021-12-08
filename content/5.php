@@ -14,11 +14,11 @@ Přední dveře motelu jsou zamčené a zdá se, že všechna okna jsou zavřen�
 </div>
 
 <div class="link">
-<a href="241.php">Vylomit zámek</a>
+<a href="game.php?action=1">Vylomit zámek</a>
 </div>
 
 <div class="link">
-<a href="218.php">Přespat v kamiónu</a>
+<a href="game.php?action=2">Přespat v kamiónu</a>
 </div>
 
 <?php

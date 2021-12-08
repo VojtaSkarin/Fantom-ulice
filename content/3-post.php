@@ -7,8 +7,8 @@ $stesti_ted = $_SESSION['stesti_ted'];
 $_SESSION['stesti_ted']--;
 
 if ($hod <= $stesti) {
-	header('Location: 354.php');
+	header('Location: content/next.php?stav=content/354.php');
 } else {
-	header('Location: 247.php');
+	header('Location: content/next.php?stav=content/247.php');
 }
 ?>

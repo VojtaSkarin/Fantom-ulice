@@ -23,6 +23,7 @@ div.title {
 div.text {
 	max-width: var(--page-width);
 	margin: auto;
+	margin-bottom: 2ch;
 	text-align: justify;
 }
 

@@ -116,7 +116,7 @@ if (count($vybaveni) == 0) {
 
 <br><br>
 <div class="text">
-<i>Překlepy, jednopísmenné předložky na konci řádku, chyby a další nedostatky prosím hlaste na xskarou1@fi.muni.cz. Ocením i jakoukoliv zpětnou vazbu.</i>
+<i>Překlepy, jednopísmenné předložky na konci řádku, chyby a další nedostatky prosím hlaste na xskarou1@fi.muni.cz. Ocením i&nbspjakoukoliv zpětnou vazbu.</i>
 </div>
 </body>
 </html>

@@ -14,7 +14,7 @@ Fantom ulice - 3
 </div>
 
 <div class="link">
-<a href="3-post.php">Zkusit štěstí</a>
+<a href="game.php?action=1">Zkusit štěstí</a>
 </div>
 
 <?php

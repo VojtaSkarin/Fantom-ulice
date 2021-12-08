@@ -7,5 +7,5 @@ $_SESSION['stamina_ted'] -= 2;
 
 array_push($_SESSION['vybaveni'], 'plastiková hadice');
 
-header('Location: 2-post.php');
+header('Location: game.php?action=1');
 ?>

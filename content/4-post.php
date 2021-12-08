@@ -14,7 +14,7 @@ Opustíš silnici a zaparkuješ Interceptor mezi keři. Když vypneš motor, naj
 </div>
 
 <div class="link">
-<a href="3-post.php">Otočit na <b>254</b></a>
+<a href="game.php?action=1">Otočit na <b>254</b></a>
 </div>
 
 <?php

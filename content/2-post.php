@@ -14,7 +14,7 @@ Běžíš k autu a rychle otevřeš balíček léků z Med-Kitu. Píchneš si s�
 </div>
 
 <div class="link">
-<a href="13.php">Otočit na <b>13</b></a>
+<a href="game.php?action=1">Otočit na <b>13</b></a>
 </div>
 
 <?php
