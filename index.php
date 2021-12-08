@@ -16,7 +16,7 @@ Fantom ulice
 </head>
 <body>
 <div class="text">
-Pokrytí hry: 2,1&nbsp%
+Pokrytí hry: 2,6&nbsp%
 </div>
 <div class="link">
 <a href="game.php">Pokračovat</a>
