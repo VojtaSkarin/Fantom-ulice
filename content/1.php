@@ -2,10 +2,6 @@
 include 'pre.php';
 ?>
 
-<title>
-Fantom ulice - 1
-</title>
-
 <div class="header">
 1
 </div>

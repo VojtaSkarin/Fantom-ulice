@@ -1,7 +1,3 @@
-<title>
-Fantom ulice - Intro
-</title>
-
 <div class="header">
 Intro
 </div>

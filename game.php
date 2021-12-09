@@ -1,40 +1,50 @@
+<html>
+<head>
+<title>
+Fantom ulice
+</title>
+<link rel="icon" href="ff-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
 <?php
 session_start();
 
-include 'content/pre.php';
+include 'content/map.php';
 
-$mapa = [
-	'new-game' => ['intro'],
-	'intro' => ['intro-2'],
-	'intro-2' => ['intro-3'],
-	'intro-3' => ['1'],
-	'1' => ['126', '34'],
-	'2' => ['2-post'],
-	'2-post' => ['13'],
-	'3' => ['3-post'],
-	'3-post' => ['354', '247'],
-	'4' => ['4-post'],
-	'4-post' => ['254'],
-	'5' => ['241', '218'],
-	'6' => ['307'],
-	'7' => ['319', '136'],
-	'8' => ['340'],
-	'9' => ['9-post'],
-	'9-post' => ['smrt'],
-	'10' => ['264', '359'],
-];
-
-if (array_key_exists('new-game', $_GET)) {
+if (empty($_SESSION['stav'])) {
 	$_SESSION['stav'] = 'new-game';
-	header('Location: game.php');
-} else if (array_key_exists('action', $_GET)) {
-	$_SESSION['stav'] = $mapa[$_SESSION['stav']][intval($_GET['action']) - 1];
+}
+
+if (array_key_exists('action', $_GET)) {
+	$action = $_GET['action'];
+	
+	if ($action == 'new-game') {
+		$_SESSION['stav'] = $action;
+	} else if ($action == 'med-kit') {
+		// ???
+	} else {
+		$stav = $mapa[$_SESSION['stav']];
+		$offset = intval($action) - 1;
+		
+		if ($_SESSION['stav'] == 'fortune-post' && $offset == 0) {
+			$_SESSION['stav'] = $_SESSION['dalsi-stav'];
+		} else if (array_key_exists($offset, $stav)) {
+			if (! array_key_exists($_SESSION['stav'], $podminky) ||
+				! array_key_exists($offset, $podminky[$_SESSION['stav']]) ||
+				$podminky[$_SESSION['stav']][$offset]()) {
+					$_SESSION['minuly-stav'] = $_SESSION['stav'];
+					$_SESSION['stav'] = $stav[$offset];
+			}
+		}
+	}
+	
 	header('Location: game.php');
 } else {
 	include 'content/' . $_SESSION['stav'] . '.php';
 }
 ?>
 
-<title>
-Fantom ulice
-</title>
+</body>
+</html>

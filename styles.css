@@ -27,10 +27,17 @@ div.text {
 	text-align: justify;
 }
 
+div.text-choice {
+	max-width: var(--page-width);
+	margin: auto;
+	margin-top: 1.5ch;
+	text-align: justify;
+}
+
 div.link {
 	max-width: var(--page-width);
 	margin: auto;
-	margin-top: 0.5ch;
+	margin-bottom: 0.5ch;
 }
 
 div.stats {
