@@ -23,7 +23,11 @@ if (array_key_exists('action', $_GET)) {
 	if ($action == 'new-game') {
 		$_SESSION['stav'] = $action;
 	} else if ($action == 'med-kit') {
-		// ???
+		if ($_SESSION['medkit'] > 0 &&
+			$_SESSION['stamina_ted'] < $_SESSION['stamina_max']) {
+				$_SESSION['medkit']--;
+				$_SESSION['stamina_ted'] = min($_SESSION['stamina_ted'] + 4, $_SESSION['stamina_max']);
+		}
 	} else {
 		$stav = $mapa[$_SESSION['stav']];
 		$offset = intval($action) - 1;

@@ -31,7 +31,7 @@ $_SESSION['kredity'] = 200;
 
 $_SESSION['vybaveni'] = array();
 
-header('Location: ../game.php?action=1');
+header('Location: game.php?action=1');
 ?>
 
 <title>
