@@ -1,6 +1,4 @@
 <?php
-include 'pre.php';
-
 $_SESSION['medkit']--;
 $_SESSION['umeni_boje_ted']--;
 $_SESSION['stamina_ted'] -= 2;

@@ -1,9 +1,9 @@
 <?php
 echo '<div class="text">';
 if ($_SESSION['vysledek']) {
-	echo 'Máš štěstí.';
+	echo 'Zvládl jsi zareagovat.';
 } else {
-	echo 'Máš smůlu.';
+	echo 'Nezvládl jsi zareagovat.';
 }
 echo '</div>';
 ?>

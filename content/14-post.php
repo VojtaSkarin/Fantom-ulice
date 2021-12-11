@@ -1,8 +1,4 @@
-<?php
-include 'pre.php';
-?>
-
-<div class="header">
+<div class="title-main">
 14
 </div>
 <div class="text">

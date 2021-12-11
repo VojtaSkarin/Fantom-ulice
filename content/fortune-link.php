@@ -1,3 +1,3 @@
 <div class="link">
-<a href="game.php?action=1">Zkusit štěstí</a>
+<a href="game.php?action=fortune">Zkusit štěstí</a>
 </div>

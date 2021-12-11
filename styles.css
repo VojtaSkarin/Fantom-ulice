@@ -1,18 +1,44 @@
 html {
-	font-size: 20;
 	--page-width: 48ch;
+	--font-size: 20;
+	font-size: var(--font-size);
 }
 
-div.header {
+div.title-main-1 {
 	text-align: center;
 	margin: auto;
 	margin-top: 1ch;
+	margin-bottom: 0.15ch;
+	font-size: 110%;
+	max-width: var(--page-width);
+}
+
+div.title-main-2 {
+	text-align: center;
+	margin: auto;
+	font-size: 170%;
+	max-width: var(--page-width);
+}
+
+div.title-main-3 {
+	text-align: center;
+	margin: auto;
+	margin-bottom: 2ch;
+	font-size: 80%;
+	max-width: var(--page-width);
+}
+
+div.title-main {
+	text-align: center;
+	margin: auto;
+	margin-top: 1ch;
+	margin-bottom: 1ch;
 	font-weight: bold;
 	font-size: 150%;
 	max-width: var(--page-width);
 }
 
-div.title {
+div.title-middle {
 	text-align: center;
 	margin: auto;
 	max-width: var(--page-width);
@@ -46,11 +72,26 @@ div.stats {
 	margin-top: 4ch;
 }
 
+table.header {
+	width: var(--page-width);
+	margin: auto;
+	font-size: var(--font-size);
+	text-align: center;
+	margin-bottom: 2ch;
+	border: 1px solid;
+}
+
 img.medkit {
 	width: 3ch;
 	margin: 0.2ch;
 	position: relative;
 	top: 0.8ch;
+}
+
+img.cover {
+	max-width: var(--page-width);
+	display: block;
+	margin: auto;
 }
 
 img.credit {

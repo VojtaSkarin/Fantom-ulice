@@ -3,12 +3,10 @@
 <title>
 Fantom ulice
 </title>
-<link rel="icon" href="ff-icon.png">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
 
 <?php
+include 'header-table.php';
+
 session_start();
 
 include 'content/map.php';
@@ -22,18 +20,40 @@ if (array_key_exists('action', $_GET)) {
 	
 	if ($action == 'new-game') {
 		$_SESSION['stav'] = $action;
+		
 	} else if ($action == 'med-kit') {
 		if ($_SESSION['medkit'] > 0 &&
 			$_SESSION['stamina_ted'] < $_SESSION['stamina_max']) {
 				$_SESSION['medkit']--;
 				$_SESSION['stamina_ted'] = min($_SESSION['stamina_ted'] + 4, $_SESSION['stamina_max']);
 		}
+	
+	} else if ($action == 'fortune') {
+		if (in_array($_SESSION['stav'], $zkouseni_stesti)) {
+			$hod = rand(1,6) + rand(1,6);		
+			$_SESSION['vysledek'] = $hod <= $_SESSION['stesti_ted'];		
+			$_SESSION['stesti_ted'] = max($_SESSION['stesti_ted'] - 1, 0);
+			
+			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-post'][1 - (int)$_SESSION['vysledek']];
+			$_SESSION['stav'] = 'fortune';
+		}
+	
+	} else if ($action == 'fight-skill') {
+		if (in_array($_SESSION['stav'], $zkouseni_umeni_boje)) {
+			$hod = rand(1,6) + rand(1,6);
+			$_SESSION['vysledek'] = $hod <= $_SESSION['umeni_boje_ted'];
+			
+			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-post'][1 - (int) $_SESSION['vysledek']];
+			$_SESSION['stav'] = 'fight-skill';
+		}
+		
 	} else {
 		$stav = $mapa[$_SESSION['stav']];
 		$offset = intval($action) - 1;
 		
-		if ($_SESSION['stav'] == 'fortune-post' && $offset == 0) {
+		if (in_array($_SESSION['stav'], ['fortune', 'fight-skill']) && $offset == 0) {
 			$_SESSION['stav'] = $_SESSION['dalsi-stav'];
+			
 		} else if (array_key_exists($offset, $stav)) {
 			if (! array_key_exists($_SESSION['stav'], $podminky) ||
 				! array_key_exists($offset, $podminky[$_SESSION['stav']]) ||

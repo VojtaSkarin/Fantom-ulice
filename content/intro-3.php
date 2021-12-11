@@ -1,8 +1,4 @@
 <?php
-include 'pre.php';
-?>
-
-<?php
 include 'intro-header.php';
 ?>
 

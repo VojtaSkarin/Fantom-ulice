@@ -1,5 +1,4 @@
 <?php
-include 'pre.php';
 
 // Init variables
 $_SESSION['stav'] = 'new-game';

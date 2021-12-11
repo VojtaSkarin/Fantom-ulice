@@ -1,6 +1,4 @@
 <?php
-include 'pre.php';
-
 $_SESSION['rakety'] = 0;
 $_SESSION['bodce'] = 0;
 $_SESSION['olej'] = 0;
