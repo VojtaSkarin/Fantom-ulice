@@ -15,6 +15,9 @@
 <a href="game.php?action=new-game">Nová hra</a>
 </td>
 <td>
+<a href="rules.php">Pravidla</a>
+</td>
+<td>
 <a href="faq.php">FAQ</a>
 </td>
 </tr>

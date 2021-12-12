@@ -1,6 +1,33 @@
+<html>
+<head>
+<title>
+Často kladené dotazy
+</title>
+
 <?php
 include 'header-table.php';
 ?>
 
-Je potřeba tužka, papír a šestihraná kostka? Ne!
-Použití Med-Kitu při plném zdraví? Těžko říct
+<div class="title-main">
+Často kladené dotazy
+</div>
+
+<div class="title-justify">
+<b>Potřebuji k&nbsp;hraní tužku, papír a&nbsp;šestihrannou kostku?</b>
+</div>
+
+<div class="text">
+Nikolivěk! Náčiní potřebuješ k&nbsp;hraní knižní verze, v&nbsp;této elektronické verzi se obejdeš bez něj. Všechno házení kostkou a&nbsp;počítání statistik obstará systém za tebe a&nbsp;ty budeš dělat jen to zábavné -&nbsp;volit svůj postup hrou a&nbsp;vychutnávat atmosféru postapo světa <i>Fantoma ulice</i>.
+</div>
+
+<div class="title-justify">
+<b>Mohu použít Med-Kit, i&nbsp;když mám plné zdraví?</b>
+</div>
+
+<div class="text">
+Těžko říct. Pravidla říkají toto: <i>&bdquo;Použití Med-Kitu ti obnoví 4 body STAMINY. Med-Kit můžeš použít kdykoli, pokud zrovna nebojuješ, ale pamatuj si, že po každém použití musíš z&nbsp;</i>Průvodní listiny<i> vyškrtnout jeden balíček.&ldquo;</i> Pravidla použití Med-Kitu při plném zdraví nezakazují, mohli bychom tedy předpokládat, že jej implicitně povolují. Jelikož je ale zvýšení STAMINY jediným <i>běžným</i> důsledkem použití Med-Kitu, neměla by tato akce při plném zdraví žádný efekt. Proto ji tato implementace nepovoluje.
+</div>
+
+<?php
+include 'feedback.php'
+?>

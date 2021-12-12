@@ -23,7 +23,7 @@ include 'header-table.php';
 <b>FANTOM ULICE</b>
 </div>
 <div class="title-main-3">
-Pokrytí hry: 6,6&nbsp;%
+Pokrytí hry: 7,9&nbsp;%
 </div>
 
 <div class="text">
@@ -47,5 +47,7 @@ Ian Livingstone, spoluzakladatel (se Stevem Jacksonem) úspěšné společnosti 
 </div>
 
 <img class="cover" src="images/cover.jpg">
-</body>
-</html>
+
+<?php
+include 'feedback.php';
+?>

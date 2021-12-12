@@ -34,7 +34,7 @@ if (array_key_exists('action', $_GET)) {
 			$_SESSION['vysledek'] = $hod <= $_SESSION['stesti_ted'];		
 			$_SESSION['stesti_ted'] = max($_SESSION['stesti_ted'] - 1, 0);
 			
-			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-post'][1 - (int)$_SESSION['vysledek']];
+			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-stesti'][1 - (int)$_SESSION['vysledek']];
 			$_SESSION['stav'] = 'fortune';
 		}
 	
@@ -43,15 +43,25 @@ if (array_key_exists('action', $_GET)) {
 			$hod = rand(1,6) + rand(1,6);
 			$_SESSION['vysledek'] = $hod <= $_SESSION['umeni_boje_ted'];
 			
-			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-post'][1 - (int) $_SESSION['vysledek']];
+			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-um-boje'][1 - (int) $_SESSION['vysledek']];
 			$_SESSION['stav'] = 'fight-skill';
+		}
+	
+	} else if ($action == 'showdown') {
+		if (in_array($_SESSION['stav'], $kdo_z_koho)) {
+			$_SESSION['vysledek'] = $_SESSION['umeni_boje_ja'] >= $_SESSION['umeni_boje_protivnik'];
+			
+			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-kdo-z-koho'][1 - (int) $_SESSION['vysledek']];
+			$_SESSION['stav'] = 'showdown';
 		}
 		
 	} else {
 		$stav = $mapa[$_SESSION['stav']];
 		$offset = intval($action) - 1;
 		
-		if (in_array($_SESSION['stav'], ['fortune', 'fight-skill']) && $offset == 0) {
+		$akce = ['fortune', 'fight-skill', 'showdown'];
+		
+		if (in_array($_SESSION['stav'], $akce) && $offset == 0) {
 			$_SESSION['stav'] = $_SESSION['dalsi-stav'];
 			
 		} else if (array_key_exists($offset, $stav)) {
@@ -68,7 +78,6 @@ if (array_key_exists('action', $_GET)) {
 } else {
 	include 'content/' . $_SESSION['stav'] . '.php';
 }
-?>
 
-</body>
-</html>
+include 'feedback.php';
+?>

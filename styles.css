@@ -1,5 +1,5 @@
 html {
-	--page-width: 48ch;
+	--page-width: 24rem;
 	--font-size: 20;
 	font-size: var(--font-size);
 }
@@ -7,8 +7,8 @@ html {
 div.title-main-1 {
 	text-align: center;
 	margin: auto;
-	margin-top: 1ch;
-	margin-bottom: 0.15ch;
+	margin-top: 0.5rem;
+	margin-bottom: 0.075rem;
 	font-size: 110%;
 	max-width: var(--page-width);
 }
@@ -23,7 +23,7 @@ div.title-main-2 {
 div.title-main-3 {
 	text-align: center;
 	margin: auto;
-	margin-bottom: 2ch;
+	margin-bottom: 1rem;
 	font-size: 80%;
 	max-width: var(--page-width);
 }
@@ -31,8 +31,8 @@ div.title-main-3 {
 div.title-main {
 	text-align: center;
 	margin: auto;
-	margin-top: 1ch;
-	margin-bottom: 1ch;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 	font-weight: bold;
 	font-size: 150%;
 	max-width: var(--page-width);
@@ -42,34 +42,43 @@ div.title-middle {
 	text-align: center;
 	margin: auto;
 	max-width: var(--page-width);
-	margin-top: 1ch;
-	margin-bottom: 1ch;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+div.title-justify {
+	text-align: justify;
+	margin: auto;
+	max-width: var(--page-width);
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	font-size: 110%;
 }
 
 div.text {
 	max-width: var(--page-width);
 	margin: auto;
-	margin-bottom: 2ch;
+	margin-bottom: 1rem;
 	text-align: justify;
 }
 
 div.text-choice {
 	max-width: var(--page-width);
 	margin: auto;
-	margin-top: 1.5ch;
+	margin-top: 0.75rem;
 	text-align: justify;
 }
 
 div.link {
 	max-width: var(--page-width);
 	margin: auto;
-	margin-bottom: 0.5ch;
+	margin-bottom: 0.25rem;
 }
 
 div.stats {
 	max-width: var(--page-width);
 	margin: auto;
-	margin-top: 4ch;
+	margin-top: 2rem;
 }
 
 table.header {
@@ -77,59 +86,60 @@ table.header {
 	margin: auto;
 	font-size: var(--font-size);
 	text-align: center;
-	margin-bottom: 2ch;
+	margin-bottom: 1rem;
 	border: 1px solid;
 }
 
 img.medkit {
 	width: 3ch;
-	margin: 0.2ch;
+	margin: 0.1rem;
 	position: relative;
-	top: 0.8ch;
+	top: 0.4rem;
 }
 
 img.cover {
 	max-width: var(--page-width);
+	max-height: auto;
 	display: block;
 	margin: auto;
 }
 
 img.credit {
-	width: 3ch;
+	width: 1.5rem;
 	position: relative;
-	top: 0.8ch;
-	left: 0.5ch;
+	top: 0.4rem;
+	left: 0.25rem;
 }
 
 img.rocket {
-	width: 3ch;
+	width: 1.5rem;
 	position: relative;
-	top: 0.9ch;
+	top: 0.45rem;
 }
 
 img.nails {
-	width: 3ch;
+	width: 1.5rem;
 	position: relative;
-	top: 0.8ch;
+	top: 0.4rem;
 }
 
 img.oil {
-	width: 3ch;
+	width: 1.5rem;
 	position: relative;
-	top: 1.2ch;
-	margin-left: 0.2ch;
+	top: 0.6rem;
+	margin-left: 0.1rem;
 }
 
 img.wheel {
-	width: 3ch;
+	width: 1.5rem;
 	position: relative;
-	top: 0.9ch;
-	margin-left: 0.2ch;
+	top: 0.45rem;
+	margin-left: 0.1rem;
 }
 
 img.canister {
-	width: 3ch;
+	width: 1.5rem;
 	position: relative;
-	top: 0.6ch;
-	margin-left: 0.2ch;
+	top: 0.3rem;
+	margin-left: 0.1rem;
 }
