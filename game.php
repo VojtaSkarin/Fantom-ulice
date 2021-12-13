@@ -49,7 +49,7 @@ if (array_key_exists('action', $_GET)) {
 	
 	} else if ($action == 'showdown') {
 		if (in_array($_SESSION['stav'], $kdo_z_koho)) {
-			$_SESSION['vysledek'] = $_SESSION['umeni_boje_ja'] >= $_SESSION['umeni_boje_protivnik'];
+			$_SESSION['vysledek'] = $_SESSION['utocne_cislo_ja'] >= $_SESSION['utocne_cislo_protivnik'];
 			
 			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-kdo-z-koho'][1 - (int) $_SESSION['vysledek']];
 			$_SESSION['stav'] = 'showdown';

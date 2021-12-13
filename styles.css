@@ -46,6 +46,15 @@ div.title-middle {
 	margin-bottom: 0.5rem;
 }
 
+div.title-middle-greater {
+	text-align: center;
+	margin: auto;
+	max-width: var(--page-width);
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	font-size: 110%;
+}
+
 div.title-justify {
 	text-align: justify;
 	margin: auto;

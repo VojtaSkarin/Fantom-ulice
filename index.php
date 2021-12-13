@@ -9,7 +9,7 @@ if (array_key_exists('goto', $_GET)) {
 <html>
 <head>
 <title>
-Fantom ulice
+Úvodní strana
 </title>
 
 <?php
@@ -23,7 +23,7 @@ include 'header-table.php';
 <b>FANTOM ULICE</b>
 </div>
 <div class="title-main-3">
-Pokrytí hry: 7,9&nbsp;%
+Pokrytí hry: 9,2&nbsp;%
 </div>
 
 <div class="text">

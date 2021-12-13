@@ -7,8 +7,8 @@ Střela z&nbsp;kuše tě zasáhne do ramene a&nbsp;ty sklouzneš z&nbsp;žebří
 </div>
 
 <?php
-$_SESSION['umeni_boje_ja'] = rand(1, 6) + $_SESSION['umeni_boje_ted'] - 1;
-$_SESSION['umeni_boje_protivnik'] = rand(1, 6) + 7;
+$_SESSION['utocne_cislo_ja'] = rand(1, 6) + $_SESSION['umeni_boje_ted'] - 1;
+$_SESSION['utocne_cislo_protivnik'] = rand(1, 6) + 7;
 ?>
 
 <?php

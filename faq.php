@@ -25,7 +25,7 @@ Nikolivěk! Náčiní potřebuješ k&nbsp;hraní knižní verze, v&nbsp;této el
 </div>
 
 <div class="text">
-Těžko říct. Pravidla říkají toto: <i>&bdquo;Použití Med-Kitu ti obnoví 4 body STAMINY. Med-Kit můžeš použít kdykoli, pokud zrovna nebojuješ, ale pamatuj si, že po každém použití musíš z&nbsp;</i>Průvodní listiny<i> vyškrtnout jeden balíček.&ldquo;</i> Pravidla použití Med-Kitu při plném zdraví nezakazují, mohli bychom tedy předpokládat, že jej implicitně povolují. Jelikož je ale zvýšení STAMINY jediným <i>běžným</i> důsledkem použití Med-Kitu, neměla by tato akce při plném zdraví žádný efekt. Proto ji tato implementace nepovoluje.
+Těžko říct. Pravidla říkají toto: <i>&bdquo;Použití Med-Kitu ti obnoví 4 body STAMINY. Med-Kit můžeš použít kdykoli, pokud zrovna nebojuješ, ale pamatuj si, že po každém použití musíš z&nbsp;</i>Průvodní listiny<i> vyškrtnout jeden balíček.&ldquo;</i> Použití Med-Kitu při plném zdraví není zakázáno, mohli bychom tedy předpokládat, že je implicitně povoleno. Jelikož je ale zvýšení STAMINY jediným <i>běžným</i> důsledkem použití Med-Kitu, neměla by tato akce při plném zdraví žádný efekt. Proto ji má implementace nepovoluje.
 </div>
 
 <?php
