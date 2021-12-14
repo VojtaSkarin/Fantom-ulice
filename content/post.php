@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION['medkit'] > 0 && $_SESSION['stamina_ted'] < $_SESSION['stamina_max']) {
+if (! $_SESSION['smrt'] && $_SESSION['medkit'] > 0 && $_SESSION['stamina_ted'] < $_SESSION['stamina_max']) {
 	echo '<div class="link">';
 	echo '<a href="game.php?action=med-kit">Použít Med-Kit</a>';
 	echo '</div>';

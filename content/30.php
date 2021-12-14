@@ -1,7 +1,5 @@
 <?php
-$hod = rand(1, 6);
-
-$_SESSION['stamina_ted'] = max($_SESSION['stamina_ted'] - $hod, 0);
+include 'catch-bullet.php';
 
 header('Location: game.php?action=1');
 ?>

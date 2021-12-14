@@ -1,6 +1,7 @@
 <?php
 
 // Init variables
+$_SESSION['smrt'] = false;
 $_SESSION['stav'] = 'new-game';
 
 $_SESSION['umeni_boje_max'] = rand(1, 6) + 6;

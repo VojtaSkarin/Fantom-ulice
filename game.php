@@ -21,6 +21,9 @@ if (array_key_exists('action', $_GET)) {
 	if ($action == 'new-game') {
 		$_SESSION['stav'] = $action;
 		
+	} else if ($_SESSION['smrt']) {
+		// nedělej nic
+		
 	} else if ($action == 'med-kit') {
 		if ($_SESSION['medkit'] > 0 &&
 			$_SESSION['stamina_ted'] < $_SESSION['stamina_max']) {
