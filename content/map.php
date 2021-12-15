@@ -1,8 +1,15 @@
 <?php
+abstract class Souboj {
+	const Tvari_v_tvar = 0;
+	const Strelba = 1;
+	const Vozidla = 2;
+}
+
 $mapa = [
 	'fortune' => [],
 	'fight-skill' => [],
 	'showdown' => [],
+	'round-result' => ['fight'],
 	'new-game' => ['intro'],
 	'intro' => ['intro-2'],
 	'intro-2' => ['intro-3'],
@@ -15,7 +22,8 @@ $mapa = [
 	'4' => ['4-2'],
 	'4-2' => ['254'],
 	'5' => ['241', '218'],
-	'6' => ['307'],
+	'6' => ['fight'],
+	'6-boj' => ['307'],
 	'7' => [],
 	'7-stesti' => ['319', '136'],
 	'8' => ['340'],
@@ -24,7 +32,8 @@ $mapa = [
 	'10' => ['264', '359'],
 	'11' => ['11-2'],
 	'11-2' => ['216'],
-	'12' => ['???'],
+	'12' => ['fight'],
+	'12-boj' => ['131'],
 	'13' => ['13-2'],
 	'13-2' => ['127', '361', '282'],
 	'14' => ['14-2'],
@@ -32,7 +41,8 @@ $mapa = [
 	'15' => ['169', '259'],
 	'16' => ['26', '254'],
 	'17' => ['17-2'],
-	'17-2' => ['???'],
+	'17-2' => ['fight'],
+	'17-2-boj' => ['103'],
 	'18' => [],
 	'19' => ['19-2'],
 	'19-2' => ['119'],
@@ -71,6 +81,15 @@ $mapa = [
 	'39-stesti' => ['171', '29'],
 	'40' => [],
 	'40-kdo-z-koho' => ['81', '296'],
+	'41' => ['165', '77'],
+	'42' => [],
+	'42-um-boje' => ['161', '186'],
+	'43' => [],
+	'43-stesti' => ['175', '201'],
+	'44' => [],
+	'44-podminka' => ['273', '214'],
+	'45' => [],
+	'45-stesti' => ['304', '60'],
 ];
 
 $zkouseni_stesti = [
@@ -78,10 +97,13 @@ $zkouseni_stesti = [
 	'7',
 	'32',
 	'39',
+	'43',
+	'45',
 ];
 
 $zkouseni_umeni_boje = [
 	'23',
+	'42',
 ];
 
 $kdo_z_koho = [
@@ -90,10 +112,20 @@ $kdo_z_koho = [
 	'40',
 ];
 
+$zkouseni_podminky = [
+	'44',
+];
+
+$boj = [
+	'6',
+	'12',
+];
+
 $podminky = [
 	'13-2' => [function () { return $_SESSION['bodce'] > 0; },
 		function() { return $_SESSION['olej'] > 0; }],
 	'15' => [function () { return $_SESSION['kredity'] >= 200; }],
 	'28' => [function () { return $_SESSION['kredity'] >= 100 && $_SESSION['medkit'] >= 2; }],
+	'41' => [function () { return $_SESSION['olej'] > 0; }]
 ];
 ?>

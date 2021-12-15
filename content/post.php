@@ -1,8 +1,12 @@
 <?php
-if (! $_SESSION['smrt'] && $_SESSION['medkit'] > 0 && $_SESSION['stamina_ted'] < $_SESSION['stamina_max']) {
-	echo '<div class="link">';
-	echo '<a href="game.php?action=med-kit">Použít Med-Kit</a>';
-	echo '</div>';
+if (! $_SESSION['smrt'] &&
+	! in_array($_SESSION['stav'], $boj) &&
+	$_SESSION['medkit'] > 0 &&
+	$_SESSION['stamina_ted'] < $_SESSION['stamina_max'] &&
+	$_SESSION['stav'] != 'fight' && $_SESSION['stav'] != 'round-result') {
+	echo "<div class=\"link\">\n";
+	echo "<a href=\"game.php?action=med-kit\">Použít Med-Kit</a>\n";
+	echo "</div>\n";
 }
 ?>
 

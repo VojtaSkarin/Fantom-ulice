@@ -99,6 +99,27 @@ table.header {
 	border: 1px solid;
 }
 
+table.enemies {
+	width: var(--page-width);
+	margin: auto;
+	font-size: var(--font-size);
+	margin-bottom: 1rem;
+}
+
+td.align-center {
+	text-align: center;
+}
+
+td.align-center-shift {
+	text-align: center;
+	position: relative;
+	left: 0.5rem;
+}
+
+td.align-right {
+	text-align: right;
+}
+
 img.medkit {
 	width: 3ch;
 	margin: 0.1rem;
