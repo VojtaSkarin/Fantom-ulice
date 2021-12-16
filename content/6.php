@@ -5,6 +5,8 @@
 <?php
 $_SESSION['pocet_zasahu'] = 0;
 $_SESSION['utocna_sila_ja_zmena'] = 0;
+$_SESSION['zbran_ja'] = 0;
+$_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 
 $_SESSION['typ_souboje'] = Souboj::Strelba;
 $_SESSION['nepritel'] = [
@@ -12,6 +14,7 @@ $_SESSION['nepritel'] = [
 		'jmeno' => ['První MOTORKÁŘ', 'Prvního MOTORKÁŘE', 'Prvním MOTORKÁŘEM'],
 		'rod' => true,
 		'utocna_sila' => 6,
+		'zbran' => 0,
 		'vydrz_ted' => 15,
 		'vydrz_max' => 15,
 		'poskozeni' => 0,
@@ -21,6 +24,7 @@ $_SESSION['nepritel'] = [
 		'jmeno' => ['Druhý MOTORKÁŘ', 'Druhého MOTORKÁŘE', 'Druhým MOTORKÁŘEM'],
 		'rod' => true,
 		'utocna_sila' => 7,
+		'zbran' => 0,
 		'vydrz_ted' => 17,
 		'vydrz_max' => 17,
 		'poskozeni' => 0,

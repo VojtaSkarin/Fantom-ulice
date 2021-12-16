@@ -10,6 +10,7 @@ include 'header-table.php';
 session_start();
 
 include 'content/map.php';
+include 'content/fight-functions.php';
 
 if (empty($_SESSION['stav'])) {
 	$_SESSION['stav'] = 'new-game';
@@ -66,17 +67,15 @@ if (array_key_exists('action', $_GET)) {
 		}
 	
 	} else if ($_SESSION['stav'] == 'fight') {
-		if ($_SESSION['stamina_ted'] > 0 && $_SESSION['pancir_ted'] > 0) {
-			$cil = intval($_GET['action']) - 1;
-			
-			$prezivsi = count(array_filter(array_map(function ($v) { return $v['vydrz_ted']; }, $_SESSION['nepritel']), function ($v) { return $v > 0; }));
-			
-			if ($prezivsi <= 0) {
+		$cil = intval($_GET['action']) - 1;
+		
+		if (ja_ziju()) {
+			if (! libovolny_nepritel_zije()) {
 				if ($cil == 0) {
-					$_SESSION['stav'] = $mapa[$_SESSION['minuly-stav'] . '-boj'][$cil];
+					$_SESSION['stav'] = $mapa[$_SESSION['minuly-stav'] . '-boj'][0];
 					
 					if ($_SESSION['pocet_zasahu'] > 1 &&
-						$_SESSION['typ_souboje'] != Souboj::Vozidla)
+						$_SESSION['typ_souboje'] == Souboj::Strelba)
 					{
 						$_SESSION['umeni_boje_ted'] = max($_SESSION['umeni_boje_ted'] - 1, 0);
 					}
@@ -84,12 +83,12 @@ if (array_key_exists('action', $_GET)) {
 				
 			} else {		
 				if (array_key_exists($cil, $_SESSION['nepritel']) &&
-					$_SESSION['nepritel'][$cil]['vydrz_ted'] > 0) {
+					jeden_nepritel_zije($_SESSION['nepritel'][$cil])) {
 						
 					for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 						$nepritel = &$_SESSION['nepritel'][$i];
 						
-						if ($nepritel['vydrz_ted'] <= 0) {
+						if (! jeden_nepritel_zije($nepritel)) {
 							$nepritel['poskozeni'] = 0;
 							continue;
 						}
@@ -104,7 +103,14 @@ if (array_key_exists('action', $_GET)) {
 						}
 						
 						if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar) {
-							$poskozeni = 1;
+							if ($utocne_cislo_ja > $utocne_cislo_protivnik) {
+								$poskozeni = $_SESSION['zbran_ja'];
+							} else if ($utocne_cislo_ja < $utocne_cislo_protivnik) {
+								$poskozeni = $nepritel['zbran'];
+							} else {
+								$poskozeni = 0;
+							}
+							
 						} else {
 							$poskozeni = rand(1, 6);
 						}
@@ -136,6 +142,10 @@ if (array_key_exists('action', $_GET)) {
 					
 					$_SESSION['stav'] = 'round-result';
 				}
+			}
+		} else {
+			if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar) {
+				$_SESSION['stav'] = $mapa[$_SESSION['minuly-stav'] . '-boj'][1];
 			}
 		}
 		

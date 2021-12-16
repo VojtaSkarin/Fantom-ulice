@@ -9,8 +9,17 @@ $podst_jmeno = [
 	false => 'a',
 ];
 
+function pocet_bodu($body) {
+	if ($body == 1) {
+		return 'bod';
+	} else if ($body > 1 && $body < 5) {
+		return 'body';
+	}
+	return 'bodů';
+}
+
 foreach ($_SESSION['nepritel'] as $nepritel) {
-	if ($nepritel['vydrz_ted'] <= 0 && $nepritel['poskozeni'] == 0) {
+	if (! jeden_nepritel_zije($nepritel) && $nepritel['poskozeni'] == 0) {
 		continue;
 	}
 	
@@ -18,16 +27,17 @@ foreach ($_SESSION['nepritel'] as $nepritel) {
 	
 	if ($nepritel['poskozeni'] > 0) {
 		if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
-			echo 'Zasáhl jsi ' . $nepritel['jmeno'][1] . ' a ubral ' . $zajmeno[$nepritel['rod']] . ' ' . $nepritel['poskozeni'] . ' body pancíře.';
+			echo 'Zasáhl jsi ' . $nepritel['jmeno'][1] . ' a ubral ' . $zajmeno[$nepritel['rod']] . ' ' . $nepritel['poskozeni'] . ' ' . pocet_bodu($nepritel['poskozeni']) . ' pancíře.';
 		} else {
-			echo 'Zasáhl jsi ' . $nepritel['jmeno'][1] . ' a ubral ' . $zajmeno[$nepritel['rod']] . ' ' . $nepritel['poskozeni'] . ' body staminy.';
+			echo 'Zasáhl jsi ' . $nepritel['jmeno'][1] . ' a ubral ' . $zajmeno[$nepritel['rod']] . ' ' . $nepritel['poskozeni'] . ' ' . pocet_bodu($nepritel['poskozeni']) . ' staminy.';
 		}
 	} else if ($nepritel['poskozeni'] < 0) {
 		if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
-			echo $nepritel['jmeno'][0] . ' tě zasáhl' . $podst_jmeno[$nepritel['rod']] . ' a ubral' . $podst_jmeno[$nepritel['rod']] . ' ti ' . -$nepritel['poskozeni'] . ' body pancíře.';
+			echo $nepritel['jmeno'][0] . ' tě zasáhl' . $podst_jmeno[$nepritel['rod']] . ' a ubral' . $podst_jmeno[$nepritel['rod']] . ' ti ' . -$nepritel['poskozeni'] . ' ' . pocet_bodu(-$nepritel['poskozeni']) . ' pancíře.';
 		} else {
-			echo $nepritel['jmeno'][0] . ' tě zasáhl' . $podst_jmeno[$nepritel['rod']] . ' a ubral' . $podst_jmeno[$nepritel['rod']] . ' ti ' . -$nepritel['poskozeni'] . ' body staminy.';
+			echo $nepritel['jmeno'][0] . ' tě zasáhl' . $podst_jmeno[$nepritel['rod']] . ' a ubral' . $podst_jmeno[$nepritel['rod']] . ' ti ' . -$nepritel['poskozeni'] . ' ' . pocet_bodu(-$nepritel['poskozeni']) . ' staminy.';
 		}
+		
 	} else {
 		if ($nepritel['byl_cil']) {
 			echo 'S ' . $nepritel['jmeno'][2] . ' jste se navzájem minuli.';

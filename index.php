@@ -23,7 +23,7 @@ include 'header-table.php';
 <b>FANTOM ULICE</b>
 </div>
 <div class="title-main-3">
-Pokrytí hry: 11,8&nbsp;%
+Pokrytí hry: 13,2&nbsp;%
 </div>
 
 <div class="text">

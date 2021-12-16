@@ -110,10 +110,16 @@ td.align-center {
 	text-align: center;
 }
 
-td.align-center-shift {
+td.align-center-shift-stamina {
 	text-align: center;
 	position: relative;
 	left: 0.5rem;
+}
+
+td.align-center-shift-pancir {
+	text-align: center;
+	position: relative;
+	left: 0.75rem;
 }
 
 td.align-right {

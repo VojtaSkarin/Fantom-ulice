@@ -5,6 +5,8 @@
 <?php
 $_SESSION['pocet_zasahu'] = 0;
 $_SESSION['utocna_sila_ja_zmena'] = -2;
+$_SESSION['zbran_ja'] = 0;
+$_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 
 $_SESSION['typ_souboje'] = Souboj::Vozidla;
 $_SESSION['nepritel'] = [
@@ -12,6 +14,7 @@ $_SESSION['nepritel'] = [
 		'jmeno' => ['MOTORKA', 'MOTORKU', 'MOTORKOU'],
 		'rod' => false,
 		'utocna_sila' => 6,
+		'zbran' => 0,
 		'vydrz_ted' => 9,
 		'vydrz_max' => 9,
 		'poskozeni' => 0,

@@ -7,7 +7,13 @@ echo "<td class=\"align-center\">\n";
 echo "UMĚNÍ BOJE\n";
 echo "</td>\n";
 echo "<td class=\"align-right\">\n";
-echo "STAMINA\n";
+
+if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
+	echo "PANCÍŘ\n";
+} else {
+	echo "STAMINA\n";
+}
+
 echo "</td>\n";
 echo "</tr>\n";
 
@@ -19,7 +25,13 @@ foreach ($_SESSION['nepritel'] as $nepritel) {
 	echo "<td class=\"align-center\">\n";
 	echo $nepritel['utocna_sila'] . "\n";
 	echo "</td>\n";
-	echo "<td class=\"align-center-shift\">\n";
+	
+	if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
+		echo "<td class=\"align-center-shift-pancir\">\n";
+	} else {
+		echo "<td class=\"align-center-shift-stamina\">\n";
+	}
+	
 	echo $nepritel['vydrz_ted'] . '/' . $nepritel['vydrz_max'] . "\n";
 	echo "</td>\n";
 	echo "</tr>\n";
