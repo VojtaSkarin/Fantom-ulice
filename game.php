@@ -65,7 +65,15 @@ if (array_key_exists('action', $_GET)) {
 		if (in_array($_SESSION['stav'], $zkouseni_podminky)) {
 			$_SESSION['stav'] = $mapa[$_SESSION['stav'] . '-podminka'][1 - (int) $_SESSION['podminka']];
 		}
-	
+		
+	} else if ($action == 'chance') {
+		if (in_array($_SESSION['stav'], $zkouseni_nahody)) {
+			$_SESSION['vysledek'] = rand(1, 6) <= 3;
+			
+			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-nahoda'][1 - (int) $_SESSION['vysledek']];
+			$_SESSION['stav'] = 'chance';
+		}
+		
 	} else if ($_SESSION['stav'] == 'fight') {
 		$cil = intval($_GET['action']) - 1;
 		
@@ -153,7 +161,7 @@ if (array_key_exists('action', $_GET)) {
 		$stav = $mapa[$_SESSION['stav']];
 		$offset = intval($action) - 1;
 		
-		$akce = ['fortune', 'fight-skill', 'showdown'];
+		$akce = ['fortune', 'chance', 'fight-skill', 'showdown'];
 		
 		if (in_array($_SESSION['stav'], $akce) && $offset == 0) {
 			$_SESSION['stav'] = $_SESSION['dalsi-stav'];
