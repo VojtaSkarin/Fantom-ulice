@@ -6,6 +6,7 @@
 $_SESSION['pocet_zasahu'] = 0;
 $_SESSION['utocna_sila_ja_zmena'] = 0;
 $_SESSION['zbran_ja'] = 0;
+$_SESSION['kolo'] = 1;
 $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 
 $_SESSION['typ_souboje'] = Souboj::Vozidla;

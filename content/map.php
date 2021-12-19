@@ -3,7 +3,10 @@ abstract class Souboj {
 	const Tvari_v_tvar = 0;
 	const Strelba = 1;
 	const Vozidla = 2;
+	const Srazky = 3;
 }
+
+$souboje_vozidel = [Souboj::Vozidla, Souboj::Srazky];
 
 $mapa = [
 	'fortune' => [],
@@ -113,6 +116,14 @@ $mapa = [
 	'59-stesti' => ['73', '121'],
 	'60' => ['60-2'],
 	'60-2' => ['135'],
+	'61' => ['272'],
+	'62' => ['151'],
+	'63' => ['fight'],
+	'63-boj' => ['334'],
+	'64' => [],
+	'64-stesti' => ['242', '313'],
+	'65' => ['65-2'],
+	'65-2' => ['207'],
 ];
 
 $zkouseni_stesti = [
@@ -123,6 +134,7 @@ $zkouseni_stesti = [
 	'43',
 	'45',
 	'59',
+	'64',
 ];
 
 $zkouseni_umeni_boje = [

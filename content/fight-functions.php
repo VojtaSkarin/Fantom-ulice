@@ -14,6 +14,10 @@ function jeden_nepritel_zije($nepritel) {
 }
 
 function libovolny_nepritel_zije() {
+	if ($_SESSION['typ_souboje'] == Souboj::Srazky && $_SESSION['kolo'] == 5) {
+		return false;
+	}
+	
 	foreach ($_SESSION['nepritel'] as $nepritel) {
 		if (jeden_nepritel_zije($nepritel)) {
 			return true;

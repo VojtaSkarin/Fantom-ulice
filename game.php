@@ -104,7 +104,7 @@ if (array_key_exists('action', $_GET)) {
 						$utocne_cislo_protivnik = rand(1, 6) + rand(1, 6) + $nepritel['utocna_sila'];
 						$utocne_cislo_ja = rand(1, 6) + rand(1, 6) + $_SESSION['utocna_sila_ja_zmena'];
 						
-						if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
+						if (in_array($_SESSION['typ_souboje'], $souboje_vozidel)) {
 							$utocne_cislo_ja += $_SESSION['palebna_sila_ted'];
 						} else {
 							$utocne_cislo_ja += $_SESSION['umeni_boje_ted'];
@@ -118,6 +118,9 @@ if (array_key_exists('action', $_GET)) {
 							} else {
 								$poskozeni = 0;
 							}
+							
+						} else if ($_SESSION['typ_souboje'] == Souboj::Srazky) {
+							$poskozeni = 2;
 							
 						} else {
 							$poskozeni = rand(1, 6);
@@ -133,8 +136,9 @@ if (array_key_exists('action', $_GET)) {
 							}
 							
 						} else if ($utocne_cislo_ja < $utocne_cislo_protivnik) {
-							if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
+							if (in_array($_SESSION['typ_souboje'], $souboje_vozidel)) {
 								$_SESSION['pancir_ted'] = max($_SESSION['pancir_ted'] - $poskozeni, 0);
+								
 							} else {
 								$_SESSION['stamina_ted'] = max($_SESSION['stamina_ted'] - $poskozeni, 0);
 							}
@@ -147,6 +151,8 @@ if (array_key_exists('action', $_GET)) {
 							$nepritel['byl_cil'] = $i == $cil;
 						}
 					}
+					
+					$_SESSION['kolo'] += 1;
 					
 					$_SESSION['stav'] = 'round-result';
 				}

@@ -16,6 +16,7 @@ if ($_SESSION['pancir_ted'] <= 0) {
 	echo "</div>\n";
 	
 	include 'death-link.php';
+	
 } else {
 	echo "Pokud výbuch přežiješ, otoč na <b>135</b>.\n";
 	echo "</div>\n";

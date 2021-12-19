@@ -1,4 +1,8 @@
 <?php
+echo "<div class=\"title-main\">\n";
+echo $_SESSION['kolo'] . ". kolo\n";
+echo "</div>\n";
+
 include 'enemy-table.php';
 
 if (ja_ziju()) {
@@ -20,7 +24,8 @@ if (ja_ziju()) {
 		}
 		
 	} else {
-		if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar) {
+		if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar ||
+			$_SESSION['typ_souboje'] == Souboj::Srazky) {
 			echo "<div class=\"text\">\n";
 			echo "Porazil jsi všechny nepřátele.\n";
 			echo "</div>\n";

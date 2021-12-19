@@ -26,13 +26,13 @@ foreach ($_SESSION['nepritel'] as $nepritel) {
 	echo "<div class=\"text\">\n";
 	
 	if ($nepritel['poskozeni'] > 0) {
-		if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
+		if (in_array($_SESSION['typ_souboje'], $souboje_vozidel)) {
 			echo 'Zasáhl jsi ' . $nepritel['jmeno'][1] . ' a ubral ' . $zajmeno[$nepritel['rod']] . ' ' . $nepritel['poskozeni'] . ' ' . pocet_bodu($nepritel['poskozeni']) . ' pancíře.';
 		} else {
 			echo 'Zasáhl jsi ' . $nepritel['jmeno'][1] . ' a ubral ' . $zajmeno[$nepritel['rod']] . ' ' . $nepritel['poskozeni'] . ' ' . pocet_bodu($nepritel['poskozeni']) . ' staminy.';
 		}
 	} else if ($nepritel['poskozeni'] < 0) {
-		if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
+		if (in_array($_SESSION['typ_souboje'], $souboje_vozidel)) {
 			echo $nepritel['jmeno'][0] . ' tě zasáhl' . $podst_jmeno[$nepritel['rod']] . ' a ubral' . $podst_jmeno[$nepritel['rod']] . ' ti ' . -$nepritel['poskozeni'] . ' ' . pocet_bodu(-$nepritel['poskozeni']) . ' pancíře.';
 		} else {
 			echo $nepritel['jmeno'][0] . ' tě zasáhl' . $podst_jmeno[$nepritel['rod']] . ' a ubral' . $podst_jmeno[$nepritel['rod']] . ' ti ' . -$nepritel['poskozeni'] . ' ' . pocet_bodu(-$nepritel['poskozeni']) . ' staminy.';
