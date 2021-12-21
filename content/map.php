@@ -140,6 +140,22 @@ $mapa = [
 	'74-podminka' => ['275', '380'],
 	'75' => ['75-2'],
 	'75-2' => ['167'],
+	'76' => ['198'],
+	'77' => [],
+	'77-stesti-bez' => ['290', '352'],
+	'78' => ['199', '377', '45'],
+	'79' => ['281', '150'],
+	'80' => ['80-2'],
+	'80-2' => ['232'],
+	'81' => ['218', '335'],
+	'82' => [],
+	'82-stesti-bez' => ['39', '244'],
+	'83' => ['fight'],
+	'83-boj' => ['305'],
+	'84' => ['84-2'],
+	'84-2' => ['258'],
+	'85' => [],
+	'85-podminka' => ['107', '326'],
 ];
 
 $zkouseni_stesti = [
@@ -152,6 +168,11 @@ $zkouseni_stesti = [
 	'59',
 	'64',
 	'71',
+];
+
+$zkouseni_stesti_bez = [
+	'77',
+	'82',
 ];
 
 $zkouseni_umeni_boje = [
@@ -171,6 +192,7 @@ $zkouseni_podminky = [
 	'44',
 	'46',
 	'74',
+	'85',
 ];
 
 $zkouseni_nahody = [
@@ -183,6 +205,8 @@ $boj = [
 	'17-2',
 	'48',
 	'49',
+	'63',
+	'83',
 ];
 
 $podminky = [
@@ -190,6 +214,7 @@ $podminky = [
 		function() { return $_SESSION['olej'] > 0; }],
 	'15' => [function () { return $_SESSION['kredity'] >= 200; }],
 	'28' => [function () { return $_SESSION['kredity'] >= 100 && $_SESSION['medkit'] >= 2; }],
-	'41' => [function () { return $_SESSION['olej'] > 0; }]
+	'41' => [function () { return $_SESSION['olej'] > 0; }],
+	'78' => [function () { return $_SESSION['rakety'] > 0; }],
 ];
 ?>

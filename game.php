@@ -43,6 +43,15 @@ if (array_key_exists('action', $_GET)) {
 			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-stesti'][1 - (int)$_SESSION['vysledek']];
 			$_SESSION['stav'] = 'fortune';
 		}
+		
+	} else if ($action == 'fortune-noloss') {
+		if (in_array($_SESSION['stav'], $zkouseni_stesti_bez)) {
+			$hod = rand(1, 6) + rand(1, 6);
+			$_SESSION['vysledek'] = $hod <= $_SESSION['stesti_ted'];
+			
+			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-stesti-bez'][1 - (int) $_SESSION['vysledek']];
+			$_SESSION['stav'] = 'fortune';
+		}
 	
 	} else if ($action == 'fight-skill') {
 		if (in_array($_SESSION['stav'], $zkouseni_umeni_boje)) {

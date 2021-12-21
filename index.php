@@ -19,11 +19,13 @@ include 'header-table.php';
 <div class="title-main-1">
 <b>Ian Livingstone</b>
 </div>
+
 <div class="title-main-2">
 <b>FANTOM ULICE</b>
 </div>
+
 <div class="title-main-3">
-Pokrytí hry: 19,7&nbsp;%
+Pokrytí hry: 22,3&nbsp;%
 </div>
 
 <div class="text">
