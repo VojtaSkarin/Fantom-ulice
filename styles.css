@@ -71,6 +71,15 @@ div.text {
 	text-align: justify;
 }
 
+div.note {
+	max-width: var(--page-width);
+	margin: auto;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	text-align: justify;
+	font-size: 75%;
+}
+
 div.text-choice {
 	max-width: var(--page-width);
 	margin: auto;

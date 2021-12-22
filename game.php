@@ -9,6 +9,8 @@ include 'header-table.php';
 
 session_start();
 
+//include 'content/save-load-table.php';
+
 include 'content/map.php';
 include 'content/fight-functions.php';
 
