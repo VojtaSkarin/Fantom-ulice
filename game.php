@@ -100,14 +100,24 @@ if (array_key_exists('action', $_GET)) {
 					}
 				}
 				
-			} else {		
+			} else {
 				if (array_key_exists($cil, $_SESSION['nepritel']) &&
-					jeden_nepritel_zije($_SESSION['nepritel'][$cil])) {
+					jeden_nepritel_zije($_SESSION['nepritel'][$cil]) &&
+					($_SESSION['typ_souboje'] != Souboj::Tvari_v_tvar ||
+					 $cil == $_SESSION['pristi_cil'])) {
+					
+					$_SESSION['cil'] = $_SESSION['pristi_cil'];
+					
+					do {
+						$_SESSION['pristi_cil'] = ($_SESSION['pristi_cil'] + 1) % count($_SESSION['nepritel']);
+					} while (! jeden_nepritel_zije($_SESSION['nepritel'][$_SESSION['pristi_cil']]));
 						
 					for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 						$nepritel = &$_SESSION['nepritel'][$i];
 						
-						if (! jeden_nepritel_zije($nepritel)) {
+						if (! jeden_nepritel_zije($nepritel) ||
+							($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar &&
+							 $i != $_SESSION['cil'])) {
 							$nepritel['poskozeni'] = 0;
 							continue;
 						}
@@ -163,13 +173,15 @@ if (array_key_exists('action', $_GET)) {
 						}
 					}
 					
+					
 					$_SESSION['kolo'] += 1;
 					
 					$_SESSION['stav'] = 'round-result';
 				}
 			}
 		} else {
-			if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar) {
+			if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar &&
+				array_key_exists(1, $mapa[$_SESSION['minuly-stav'] . '-boj'])) {
 				$_SESSION['stav'] = $mapa[$_SESSION['minuly-stav'] . '-boj'][1];
 			}
 		}

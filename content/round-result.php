@@ -18,8 +18,13 @@ function pocet_bodu($body) {
 	return 'bodů';
 }
 
-foreach ($_SESSION['nepritel'] as $nepritel) {
-	if (! jeden_nepritel_zije($nepritel) && $nepritel['poskozeni'] == 0) {
+for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
+	$nepritel = $_SESSION['nepritel'][$i];
+	
+	if ((! jeden_nepritel_zije($nepritel) &&
+		 $nepritel['poskozeni'] == 0) ||
+		($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar &&
+		 $_SESSION['cil'] != $i)) {
 		continue;
 	}
 	

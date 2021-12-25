@@ -18,9 +18,13 @@ if (ja_ziju()) {
 				continue;
 			}
 			
-			echo "<div class=\"link\">\n";
-			echo "<a href=\"game.php?action=" . ($i + 1) . "\">" . $nepritel['jmeno'][0] . "</a>\n";
-			echo "</div>\n";
+			if ($_SESSION['typ_souboje'] != Souboj::Tvari_v_tvar ||
+				$_SESSION['pristi_cil'] == $i)
+			{
+				echo "<div class=\"link\">\n";
+				echo "<a href=\"game.php?action=" . ($i + 1) . "\">" . $nepritel['jmeno'][0] . "</a>\n";
+				echo "</div>\n";
+			}
 		}
 		
 	} else {
@@ -49,9 +53,14 @@ if (ja_ziju()) {
 		echo "Byl jsi omráčen.\n";
 		echo "</div>\n";
 		
-		echo "<div class=\"link\">\n";
-		echo "<a href=\"game.php?action=1\">Pokračovat</a>\n";
-		echo "</div>\n";
+		if (array_key_exists(1, $mapa[$_SESSION['minuly-stav'] . '-boj'])) {
+			echo "<div class=\"link\">\n";
+			echo "<a href=\"game.php?action=1\">Pokračovat</a>\n";
+			echo "</div>\n";
+			
+		} else {
+			include 'death-link.php';
+		}
 		
 	} else {
 		echo "<div class=\"text\">\n";
