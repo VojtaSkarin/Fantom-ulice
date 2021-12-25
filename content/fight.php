@@ -29,9 +29,13 @@ if (ja_ziju()) {
 			echo "<div class=\"text\">\n";
 			echo "Porazil jsi všechny nepřátele.\n";
 			echo "</div>\n";
-		} else {
+		} else if ($_SESSION['typ_souboje'] == Souboj::Strelba) {
 			echo "<div class=\"text\">\n";
 			echo "Zabil jsi všechny nepřátele.\n";
+			echo "</div>\n";
+		} else {
+			echo "<div class=\"text\">\n";
+			echo "Zničil jsi všechna nepřátelská vozidla.\n";
 			echo "</div>\n";
 		}
 		

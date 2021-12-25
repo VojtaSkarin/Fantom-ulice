@@ -42,7 +42,7 @@ foreach ($_SESSION['nepritel'] as $nepritel) {
 		if ($nepritel['byl_cil']) {
 			echo 'S ' . $nepritel['jmeno'][2] . ' jste se navzájem minuli.';
 		} else {
-			echo $nepritel['jmeno'][0] . ' tě minul.';
+			echo $nepritel['jmeno'][0] . ' tě minul' . $podst_jmeno[$nepritel['rod']] . '.';
 		}
 	}
 	
