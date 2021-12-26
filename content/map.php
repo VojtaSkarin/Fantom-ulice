@@ -220,6 +220,22 @@ $mapa = [
 	'124' => ['203', '344'],
 	'125' => [],
 	'125-um-boje' => ['349', '202'],
+	'126' => ['274', '155'],
+	'127' => [],
+	'127-nahoda' => ['373', '220'],
+	'128' => ['312', '165', '77'],
+	'129' => ['129-2'],
+	'129-2' => ['93'],
+	'130' => ['314', '71'],
+	'131' => ['131-2'],
+	'131-2' => ['22'],
+	'132' => [],
+	'132-podminka' => ['275', '380'],
+	'133' => ['133-2'],
+	'133-2' => ['151'],
+	'134' => ['207', '330'],
+	'135' => [],
+	'135-um-boje' => ['193', '36'],
 ];
 
 $zkouseni_stesti = [
@@ -246,6 +262,7 @@ $zkouseni_umeni_boje = [
 	'67',
 	'70',
 	'125',
+	'135',
 ];
 
 $kdo_z_koho = [
@@ -263,10 +280,12 @@ $zkouseni_podminky = [
 	'96',
 	'104',
 	'118',
+	'132',
 ];
 
 $zkouseni_nahody = [
 	'55',
+	'127',
 ];
 
 $boj = [
@@ -286,13 +305,18 @@ $boj = [
 ];
 
 $podminky = [
-	'13-2' => [function () { return $_SESSION['bodce'] > 0; },
-		function() { return $_SESSION['olej'] > 0; }],
+	'13-2' => ['ma_bodce', 'ma_olej'],
 	'15' => [function () { return $_SESSION['kredity'] >= 200; }],
 	'28' => [function () { return $_SESSION['kredity'] >= 100 && $_SESSION['medkit'] >= 2; }],
-	'41' => [function () { return $_SESSION['olej'] > 0; }],
-	'78' => [function () { return $_SESSION['rakety'] > 0; }],
-	'86-2' => [function () { return $_SESSION['medkit'] > 0; }],
+	'41' => ['ma_olej'],
+	'78' => ['ma_rakety'],
+	'86-2' => ['ma_medkit'],
 	'109' => [function () { return in_array('páčidlo', $_SESSION['vybaveni']); }],
+	'128' => ['ma_bodce', 'ma_olej'],
 ];
+
+function ma_bodce() { return $_SESSION['bodce'] > 0; }
+function ma_olej() { return $_SESSION['olej'] > 0; }
+function ma_rakety() { return $_SESSION['rakety'] > 0; }
+function ma_medkit() { return $_SESSION['medkit'] > 0; }
 ?>

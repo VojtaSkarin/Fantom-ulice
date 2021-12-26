@@ -79,7 +79,7 @@ if (array_key_exists('action', $_GET)) {
 		
 	} else if ($action == 'chance') {
 		if (in_array($_SESSION['stav'], $zkouseni_nahody)) {
-			$_SESSION['vysledek'] = rand(1, 6) <= 3;
+			$_SESSION['vysledek'] = rand(1, 6) <= $_SESSION['hranice'];
 			
 			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-nahoda'][1 - (int) $_SESSION['vysledek']];
 			$_SESSION['stav'] = 'chance';
@@ -210,6 +210,7 @@ if (array_key_exists('action', $_GET)) {
 	}
 	
 	header('Location: game.php');
+	
 } else {
 	include 'content/' . $_SESSION['stav'] . '.php';
 }
