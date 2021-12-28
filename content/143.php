@@ -7,7 +7,7 @@ V&nbsp;obavách, že ti dva motorkáři mohli patřit k&nbsp;nějakému gangu, s
 </div>
 
 <div class="link">
-<a href="game.php?action=1">Otočit na <b>96</></a>
+<a href="game.php?action=1">Otočit na <b>96</b></a>
 </div>
 
 <?php

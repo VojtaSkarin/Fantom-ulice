@@ -6,7 +6,9 @@ echo "</div>\n";
 include 'enemy-table.php';
 
 if (ja_ziju()) {
-	if (libovolny_nepritel_zije()) {
+	if (libovolny_nepritel_zije() &&
+		($_SESSION['kolo_konec'] == 0 ||
+		 $_SESSION['kolo'] <= $_SESSION['kolo_konec'])) {
 		echo "<div class=\"text\">\n";
 		echo "Na koho chceš zaútočit?\n";
 		echo "</div>\n";
@@ -28,14 +30,19 @@ if (ja_ziju()) {
 		}
 		
 	} else {
-		if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar ||
-			$_SESSION['typ_souboje'] == Souboj::Srazky) {
+		if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar) {
 			echo "<div class=\"text\">\n";
 			echo "Porazil jsi všechny nepřátele.\n";
 			echo "</div>\n";
 		} else if ($_SESSION['typ_souboje'] == Souboj::Strelba) {
 			echo "<div class=\"text\">\n";
 			echo "Zabil jsi všechny nepřátele.\n";
+			echo "</div>\n";
+		} else if ($_SESSION['typ_souboje'] == Souboj::Srazky ||
+				   ($_SESSION['kolo_konec'] != 0 &&
+				    $_SESSION['kolo'] > $_SESSION['kolo_konec'])) {
+			echo "<div class=\"text\">\n";
+			echo "Přežil jsi " . $_SESSION['kolo_konec'] . " kola souboje.\n";
 			echo "</div>\n";
 		} else {
 			echo "<div class=\"text\">\n";

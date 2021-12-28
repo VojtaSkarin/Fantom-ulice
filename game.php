@@ -89,7 +89,9 @@ if (array_key_exists('action', $_GET)) {
 		$cil = intval($_GET['action']) - 1;
 		
 		if (ja_ziju()) {
-			if (! libovolny_nepritel_zije()) {
+			if (! libovolny_nepritel_zije() ||
+				($_SESSION['kolo_konec'] != 0 &&
+				 $_SESSION['kolo'] > $_SESSION['kolo_konec'])) {
 				if ($cil == 0) {
 					$_SESSION['stav'] = $mapa[$_SESSION['minuly-stav'] . '-boj'][0];
 					
