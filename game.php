@@ -127,6 +127,10 @@ if (array_key_exists('action', $_GET)) {
 						$utocne_cislo_protivnik = rand(1, 6) + rand(1, 6) + $nepritel['utocna_sila'];
 						$utocne_cislo_ja = rand(1, 6) + rand(1, 6) + $_SESSION['utocna_sila_ja_zmena'];
 						
+						if (array_key_exists($_SESSION['kolo'], $_SESSION['utocna_sila_ja_zmena_kola'])) {
+							$utocne_cislo_ja += $_SESSION['utocna_sila_ja_zmena_kola'][$_SESSION['kolo']];
+						}
+						
 						if (in_array($_SESSION['typ_souboje'], $souboje_vozidel)) {
 							$utocne_cislo_ja += $_SESSION['palebna_sila_ted'];
 						} else {
