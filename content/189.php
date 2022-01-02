@@ -11,7 +11,7 @@ Vpravo odbočuje ze silnice hrbolatá cesta, na které zahlédeš několikery st
 </div>
 
 <div class="link">
-<a href="game.php?action=1">Pokračovat po silnici</a>
+<a href="game.php?action=2">Pokračovat po silnici</a>
 </div>
 
 <?php
