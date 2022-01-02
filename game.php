@@ -31,7 +31,9 @@ if (array_key_exists('action', $_GET)) {
 		if (! in_array($_SESSION['stav'], $boj) &&
 			$_SESSION['medkit'] > 0 &&
 			$_SESSION['stamina_ted'] < $_SESSION['stamina_max'] &&
-			$_SESSION['stav'] != 'fight' && $_SESSION['stav'] != 'round-result') {
+			$_SESSION['stav'] != 'fight' &&
+			$_SESSION['stav'] != 'fight-round-result' &&
+			$_SESSION['stav'] != 'race-round-result') {
 				$_SESSION['medkit']--;
 				$_SESSION['stamina_ted'] = min($_SESSION['stamina_ted'] + 4, $_SESSION['stamina_max']);
 		}
@@ -182,13 +184,46 @@ if (array_key_exists('action', $_GET)) {
 					
 					$_SESSION['kolo'] += 1;
 					
-					$_SESSION['stav'] = 'round-result';
+					$_SESSION['stav'] = 'fight-round-result';
 				}
 			}
 		} else {
 			if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar &&
 				array_key_exists(1, $mapa[$_SESSION['minuly-stav'] . '-boj'])) {
 				$_SESSION['stav'] = $mapa[$_SESSION['minuly-stav'] . '-boj'][1];
+			}
+		}
+		
+	} else if ($_SESSION['stav'] == 'race') {
+		$cil = intval($_GET['action']) - 1;
+		
+		if ($cil == 0) {
+			if ($_SESSION['postup_ty'] >= 24 ||
+				$_SESSION['postup_protivnik'] >= 24)
+			{
+				$_SESSION['stav'] = $mapa[$_SESSION['minuly-stav'] . '-zavod'][1 - (int) ($_SESSION['postup_ty'] >= 24)];
+				
+			} else {
+				$hod = rand(1, 6);
+				
+				if ($_SESSION['pristi_cil'] == 1 &&
+					in_array('turbokompresor', $_SESSION['vybaveni']))
+				{
+					$hod += 1;
+				}
+				
+				if ($_SESSION['pristi_cil'] == 0) {
+					$_SESSION['postup_protivnik'] += $hod;
+					
+				} else {
+					$_SESSION['postup_ty'] += $hod;
+				}
+				
+				$_SESSION['postup'] = $hod;
+				
+				$_SESSION['pristi_cil'] = 1 - $_SESSION['pristi_cil'];
+				$_SESSION['kolo'] += 1;
+				$_SESSION['stav'] = 'race-round-result';
 			}
 		}
 		
@@ -206,7 +241,8 @@ if (array_key_exists('action', $_GET)) {
 				! array_key_exists($offset, $podminky[$_SESSION['stav']]) ||
 				$podminky[$_SESSION['stav']][$offset]()) {
 					if ($_SESSION['stav'] != 'fight' &&
-						$_SESSION['stav'] != 'round-result')
+						$_SESSION['stav'] != 'fight-round-result' &&
+						$_SESSION['stav'] != 'race-round-result')
 					{
 						$_SESSION['minuly-stav'] = $_SESSION['stav'];
 					}
