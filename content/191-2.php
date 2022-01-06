@@ -7,7 +7,10 @@ Jednu z&nbsp;předních penumatik prorazí kulka. Na okamžik ztratíš kontrolu
 
 <?php
 if ($_SESSION['pancir_ted'] <= 0 &&
-	$_SESSION['pricina_smrti'] == 1) {
+	$_SESSION['pricina_smrti'] == 1)
+{
+	$_SESSION['smrt'] = true;
+	
 	echo "</div>\n";
 	echo "\n";
 	echo "<div class=\"text\">\n";
@@ -20,6 +23,8 @@ if ($_SESSION['pancir_ted'] <= 0 &&
 	echo "S&nbsp;prázdnou pneumatikou nemůžeš jet, ale bylo by nebezpečné opustit auto pod palbou. Náhle zahlédneš další oslňunující záblesk; z&nbsp;okna v&nbsp;prvním patře stavení vystřelila bazuka. Jsi snadný cíl a&nbsp;projektil tě nemine. Hoď dvěma kostkami a&nbsp;výsledek odečti do PANCÍŘE svého auta.\n";
 
 	if ($_SESSION['pancir_ted'] <= 0) {
+		$_SESSION['smrt'] = true;
+		
 		echo "</div>\n";
 		echo "\n";
 		echo "<div class=\"text\">\n";
@@ -27,6 +32,7 @@ if ($_SESSION['pancir_ted'] <= 0 &&
 		echo "</div>\n";
 		
 		include 'death-link.php';
+		
 	} else {
 		echo "Pokud výbuch přežiješ, otoč na <b>292</b>.\n";
 		echo "</div>\n";

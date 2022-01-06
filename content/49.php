@@ -11,6 +11,7 @@ $_SESSION['kolo_konec'] = 0;
 $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 
 $_SESSION['typ_souboje'] = Souboj::Vozidla;
+$_SESSION['utok'] = Utok::Stridave;
 $_SESSION['nepritel'] = [
 	[
 		'jmeno' => ['VÁLEČNÝ VŮZ', 'VÁLEČNÝ VŮZ', 'VÁLEČNÝM VOZEM'],

@@ -107,7 +107,7 @@ if (array_key_exists('action', $_GET)) {
 			} else {
 				if (array_key_exists($cil, $_SESSION['nepritel']) &&
 					jeden_nepritel_zije($_SESSION['nepritel'][$cil]) &&
-					($_SESSION['typ_souboje'] != Souboj::Tvari_v_tvar ||
+					($_SESSION['utok'] == Utok::Zaroven ||
 					 $cil == $_SESSION['pristi_cil'])) {
 					
 					$_SESSION['cil'] = $_SESSION['pristi_cil'];
@@ -120,7 +120,7 @@ if (array_key_exists('action', $_GET)) {
 						$nepritel = &$_SESSION['nepritel'][$i];
 						
 						if (! jeden_nepritel_zije($nepritel) ||
-							($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar &&
+							($_SESSION['utok'] == Utok::Stridave &&
 							 $i != $_SESSION['cil'])) {
 							$nepritel['poskozeni'] = 0;
 							continue;

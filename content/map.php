@@ -1,9 +1,14 @@
 <?php
 abstract class Souboj {
-	const Tvari_v_tvar = 0;
-	const Strelba = 1;
-	const Vozidla = 2;
-	const Srazky = 3;
+	const Tvari_v_tvar = 1;
+	const Strelba = 2;
+	const Vozidla = 3;
+	const Srazky = 4;
+}
+
+abstract class Utok {
+	const Zaroven = 1;
+	const Stridave = 2;
 }
 
 $souboje_vozidel = [Souboj::Vozidla, Souboj::Srazky];
@@ -457,6 +462,32 @@ $mapa = [
 	'279' => ['279-2'],
 	'279-2' => ['40'],
 	'280' => ['77'],
+	'281' => ['58', '150'],
+	'282' => ['fight'],
+	'282-boj' => ['143'],
+	'283' => ['100'],
+	'284' => ['fight'],
+	'284-boj' => ['265'],
+	'285' => ['285-2'],
+	'285-2' => ['254'],
+	'286' => ['218'],
+	'287' => ['287-2'],
+	'287-2' => ['340'],
+	'288' => ['34'],
+	'289' => ['289-2'],
+	'289-2' => [],
+	'290' => ['fight'],
+	'290-boj' => ['106'],
+	'291' => ['fight'],
+	'291-boj' => ['208'],
+	'292' => [],
+	'292-podminka' => ['31', '173'],
+	'293' => [],
+	'293-podminka' => ['56', '125'],
+	'294' => ['fight'],
+	'294-boj' => ['334'],
+	'295' => [],
+	'295-stesti' => ['122', '329'],
 ];
 
 $zkouseni_stesti = [
@@ -479,6 +510,7 @@ $zkouseni_stesti = [
 	'221',
 	'255',
 	'273',
+	'295',
 ];
 
 $zkouseni_stesti_bez = [
@@ -523,6 +555,8 @@ $zkouseni_podminky = [
 	'225',
 	'228',
 	'254',
+	'292',
+	'293',
 ];
 
 $zkouseni_nahody = [
@@ -533,6 +567,10 @@ $zkouseni_nahody = [
 ];
 
 $boj = [
+	'fight',
+	'fight-round-result',
+	'race',
+	'race-round-result',
 	'6',
 	'12',
 	'17-2',
@@ -551,6 +589,11 @@ $boj = [
 	'184',
 	'220',
 	'227',
+	'282',
+	'284',
+	'290',
+	'291',
+	'294',
 ];
 
 $podminky = [

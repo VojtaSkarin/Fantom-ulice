@@ -23,7 +23,7 @@ for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 	
 	if ((! jeden_nepritel_zije($nepritel) &&
 		 $nepritel['poskozeni'] == 0) ||
-		($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar &&
+		($_SESSION['utok'] == Utok::Stridave &&
 		 $_SESSION['cil'] != $i)) {
 		continue;
 	}

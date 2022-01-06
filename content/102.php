@@ -11,6 +11,7 @@ $_SESSION['kolo_konec'] = 0;
 $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 
 $_SESSION['typ_souboje'] = Souboj::Strelba;
+$_SESSION['utok'] = Utok::Zaroven;
 $_SESSION['nepritel'] = [
 	[
 		'jmeno' => ['První PEKELNÝ PES', 'Prvního PEKELNÉHO PSA', 'Prvním PEKELNÝM PSEM'],

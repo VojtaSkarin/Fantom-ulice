@@ -12,6 +12,7 @@ $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 $_SESSION['pristi_cil'] = 0;
 
 $_SESSION['typ_souboje'] = Souboj::Tvari_v_tvar;
+$_SESSION['utok'] = Utok::Stridave;
 $_SESSION['nepritel'] = [
 	[
 		'jmeno' => ['První VLK', 'Prvního VLKA', 'Prvním VLKEM'],

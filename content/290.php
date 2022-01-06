@@ -1,25 +1,27 @@
 <div class="title-main">
-83
+290
 </div>
 
 <?php
 $_SESSION['pocet_zasahu'] = 0;
-$_SESSION['utocna_sila_ja_zmena'] = -2;
+$_SESSION['utocna_sila_ja_zmena'] = 0;
+$_SESSION['utocna_sila_ja_zmena_kola'] = [];
 $_SESSION['zbran_ja'] = 0;
 $_SESSION['kolo'] = 1;
 $_SESSION['kolo_konec'] = 0;
 $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
+$_SESSION['pristi_cil'] = 0;
 
 $_SESSION['typ_souboje'] = Souboj::Vozidla;
 $_SESSION['utok'] = Utok::Stridave;
 $_SESSION['nepritel'] = [
 	[
-		'jmeno' => ['VRTULNÍK', 'VRTULNÍK', 'VRTULNÍKEM'],
+		'jmeno' => ['OBRNĚNÝ VŮZ', 'OBRNĚNÝ VŮZ', 'OBRNĚNÝM VOZEM'],
 		'rod' => true,
-		'utocna_sila' => 8,
+		'utocna_sila' => 9,
 		'zbran' => 0,
-		'vydrz_ted' => 11,
-		'vydrz_max' => 11,
+		'vydrz_ted' => 20,
+		'vydrz_max' => 20,
 		'poskozeni' => 0,
 		'byl_cil' => false,
 	],
@@ -27,7 +29,7 @@ $_SESSION['nepritel'] = [
 ?>
 
 <div class="text">
-Skočíš do Interceptoru a&nbsp;zahájíš palbu na vzdušné piráty nad tebou. Ti vzápětí střelbu opětují.
+Kola drhnou o&nbsp;vozovku, až se od nich kouří. Udržíš smyk pod kontrolou a&nbsp;rozjedeš se proti blížícímu se obrněnému vozu, který na tebe začne chrlit kulky ze svého kulometu.
 </div>
 
 <?php
@@ -35,11 +37,11 @@ include 'enemy-table.php';
 ?>
 
 <div class="text">
-Během tohoto souboje vozidel sniž svou PALEBNOU SÍLU o&nbsp;2&nbsp;kvůli nepojízdnosti svého auta. Pokud zvítězíš, otoč na <b>305</b>.
+Pokud zvítězíš, otoč na <b>106</b>.
 </div>
 
 <div class="link">
-<a href="game.php?action=1">Bojovat s vrtulníkem</a>
+<a href="game.php?action=1">Bojovat s&nbsp;obrněným vozem</a>
 </div>
 
 <?php

@@ -13,6 +13,7 @@ $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 $_SESSION['pristi_cil'] = 0;
 
 $_SESSION['typ_souboje'] = Souboj::Strelba;
+$_SESSION['utok'] = Utok::Zaroven;
 $_SESSION['nepritel'] = [
 	[
 		'jmeno' => ['PSANEC', 'PSANCE', 'PSANCEM'],

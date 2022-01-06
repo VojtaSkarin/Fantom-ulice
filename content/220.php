@@ -13,6 +13,7 @@ $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 $_SESSION['pristi_cil'] = 0;
 
 $_SESSION['typ_souboje'] = Souboj::Vozidla;
+$_SESSION['utok'] = Utok::Stridave;
 $_SESSION['nepritel'] = [
 	[
 		'jmeno' => ['MOTORKA s VOZÍKEM', 'MOTORKU s VOZÍKEM', 'MOTORKOU s VOZÍKEM'],
