@@ -11,7 +11,7 @@ Zahodíš revolver do písku vedle sanitky. Vzápětí se ti ve výhledu objeví
 </div>
 
 <div class="link">
-<a href="game.php?action=1">Vrhnout nůž</a>
+<a href="game.php?action=2">Vrhnout nůž</a>
 </div>
 
 <?php
