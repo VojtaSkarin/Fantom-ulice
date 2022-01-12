@@ -25,7 +25,7 @@ include 'header-table.php';
 </div>
 
 <div class="title-main-3">
-Pokrytí hry: 97,3&nbsp;%
+Pokrytí hry: 100&nbsp;%
 </div>
 
 <div class="text">

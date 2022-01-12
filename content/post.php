@@ -113,12 +113,18 @@ echo 'VYBAVENÍ: ';
 
 $vybaveni = $_SESSION['vybaveni'];
 
-for ($i = 0; $i < count($vybaveni); $i++) {
-	$predmet = $vybaveni[$i];
+$i = 0;
+foreach ($vybaveni as $predmet) {
+	if ($predmet[0] == '_') {
+		continue;
+	}
+	
 	if ($i > 0) {
 		echo ', ';
 	}
+	
 	echo $predmet;
+	$i++;
 }
 
 if (count($vybaveni) == 0) {

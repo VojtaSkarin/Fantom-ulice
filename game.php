@@ -137,6 +137,12 @@ if (array_key_exists('action', $_GET)) {
 							$utocne_cislo_ja += $_SESSION['palebna_sila_ted'];
 						} else {
 							$utocne_cislo_ja += $_SESSION['umeni_boje_ted'];
+							
+							if ($_SESSION['typ_souboje'] == Souboj::Strelba &&
+								in_array('magnum', $_SESSION['vybaveni']))
+							{
+								$utocne_cislo_ja += 1;
+							}
 						}
 						
 						if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar) {
