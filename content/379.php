@@ -14,6 +14,8 @@ Když jste jen pár metrů od mostu, opustí řidiče Fordu odvaha. Prudce zabrz
 <a href="game.php?action=2">Zahnout vpravo</a>
 </div>
 
+<img class="fullsize" src="images/379.png">
+
 <div class="note">
 1. Sem patří čárka, neboť se zmíněné alternativy navzájem vylučují.
 </div>

@@ -38,6 +38,8 @@ Ostře se obrátit a&nbsp;čelit obrněnému vozu?
 <a href="game.php?action=3">Otoč na <b>77</b></a>
 </div>
 
+<img class="fullsize" src="images/128.png">
+
 <?php
 include 'post.php';
 ?>

@@ -36,6 +36,8 @@ Kola drhnou o&nbsp;vozovku, až se od nich kouří. Udržíš smyk pod kontrolou
 include 'enemy-table.php';
 ?>
 
+<img class="fullsize" src="images/car.png">
+
 <div class="text">
 Pokud zvítězíš, otoč na <b>106</b>.
 </div>

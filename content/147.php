@@ -10,6 +10,8 @@ Voláš na obyvatele, aby se stáhli a&nbsp;ukryli se v&nbsp;domcích. Poslechno
 include 'fortune-link.php';
 ?>
 
+<img class="fullsize" src="images/147.png">
+
 <?php
 include 'post.php';
 ?>

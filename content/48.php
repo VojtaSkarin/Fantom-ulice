@@ -34,6 +34,8 @@ Pevně sevřeš nůž, přikrčíš se a&nbsp;čekáš, až se lupič pohne. Naj
 include 'enemy-table.php';
 ?>
 
+<img class="fullsize" src="images/rifle.png">
+
 <div class="text">
 Rozhodni souboj podle pravidel pro boj tváří v&nbsp;tvář. Tvůj nůž i&nbsp;lupičovo páčidlo působí zranění za 2 body STAMINY. Pokud zvítězíš, otoč na <b>138</b>. Pokud tě omráčí, otoč na <b>100</b>.
 </div>

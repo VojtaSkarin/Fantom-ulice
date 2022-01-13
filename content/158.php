@@ -43,6 +43,8 @@ Limuzína je příliš blízko na to, abys mohl použít raketu, i&nbsp;kdybys j
 <a href="game.php?action=1">Bojovat s&nbsp;limuzínou</a>
 </div>
 
+<img class="fullsize" src="images/158.png">
+
 <?php
 include 'post.php';
 ?>

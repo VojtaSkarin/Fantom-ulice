@@ -20,7 +20,8 @@ $mapa = [
 	'fight-round-result' => ['fight'],
 	'race-round-result' => ['race'],
 	'new-game' => ['intro'],
-	'intro' => ['intro-2'],
+	'intro' => ['intro-1'],
+	'intro-1' => ['intro-2'],
 	'intro-2' => ['intro-3'],
 	'intro-3' => ['1'],
 	'1' => ['126', '34'],
@@ -615,6 +616,8 @@ $mapa = [
 	'377' => [],
 	'377-um-boje' => ['338', '191'],
 	'378' => ['301'],
+	'379' => ['20', '80'],
+	'380' => [],
 ];
 
 $zkouseni_stesti = [

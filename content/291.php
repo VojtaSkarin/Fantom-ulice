@@ -44,6 +44,8 @@ Rozhodni jedno kolo boje podle pravidel pro střelbu. Pokud souboj přežiješ, 
 <a href="game.php?action=1">Utkat se v duelu</a>
 </div>
 
+<img class="fullsize" src="images/291.png">
+
 <?php
 include 'post.php';
 ?>

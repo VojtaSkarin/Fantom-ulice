@@ -14,6 +14,8 @@ Začínáš dostávat závratě a&nbsp;neustále se třeseš. Musíš zastavit, 
 include 'death-link.php';
 ?>
 
+<img class="fullsize" src="images/car.png">
+
 <?php
 include 'post.php';
 ?>

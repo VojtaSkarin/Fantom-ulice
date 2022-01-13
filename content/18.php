@@ -9,6 +9,8 @@ Dodáváš obyvatelům odvahu, ale jejich duch je zlomen. Vzdávají se téměř
 include 'death-link.php';
 ?>
 
+<img class="fullsize" src="images/rifle.png">
+
 <?php
 include 'post.php';
 ?>

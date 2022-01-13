@@ -10,6 +10,8 @@ Když přejedete poušť a&nbsp;v&nbsp;dálce zahlédnete kouřící siluetu raf
 include 'fight-skill-link.php';
 ?>
 
+<img class="fullsize" src="images/90.png">
+
 <?php
 include 'post.php';
 ?>

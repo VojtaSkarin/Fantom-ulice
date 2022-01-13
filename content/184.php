@@ -46,6 +46,8 @@ Pekelní psi jsou příliš rozvášnění, než aby dodrželi čestné slovo. V
 include 'enemy-table.php';
 ?>
 
+<img class="fullsize" src="images/rifle.png">
+
 <div class="text">
 V&nbsp;tomto souboji (podle pravidel pro střelbu) na tebe budou v&nbsp;každém kole boje střílet oba Pekelní psi, ale ty si musíš vybrat, na kterého z&nbsp;nich budeš střílet ty. Proti druhému si budeš házet na Útočné číslo jako obvykle, ale bude-li tvé Útočné číslo větší, nezraníš ho - znamená to jen, že tě jeho kulka minula. Pokud zvítězíš, otoč na <b>69</b>, ale pokud jsi byl v&nbsp;této přestřelce zasažen více než jedenkrát, sniž natrvalo své UMĚNÍ BOJE o&nbsp;1.
 </div>

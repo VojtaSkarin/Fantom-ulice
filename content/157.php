@@ -10,6 +10,8 @@ Polní cesta je hrbolatá a&nbsp;tobě je jasné, že lidé na míle kolem uvid�
 include 'fortune-link.php';
 ?>
 
+<img class="fullsize" src="images/car.png">
+
 <?php
 include 'post.php';
 ?>

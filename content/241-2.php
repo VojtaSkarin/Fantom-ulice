@@ -27,6 +27,8 @@ if ($_SESSION['stamina_ted'] <= 1) {
 }
 ?>
 
+<img class="fullsize" src="images/241.png">
+
 <?php
 include 'post.php';
 ?>

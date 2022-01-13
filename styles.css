@@ -136,18 +136,20 @@ td.align-right {
 	text-align: right;
 }
 
+img.fullsize {
+	max-width: var(--page-width);
+	max-height: auto;
+	display: block;
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
 img.medkit {
 	width: 3ch;
 	margin: 0.1rem;
 	position: relative;
 	top: 0.4rem;
-}
-
-img.cover {
-	max-width: var(--page-width);
-	max-height: auto;
-	display: block;
-	margin: auto;
 }
 
 img.credit {

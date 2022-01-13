@@ -14,6 +14,8 @@ Otevřeš přední dveře domu a&nbsp;vstoupíš dovnitř. Z&nbsp;vstupní haly 
 <a href="game.php?action=2">Jít do pravé místnosti</a>
 </div>
 
+<img class="fullsize" src="images/motorbike.png">
+
 <?php
 include 'post.php';
 ?>

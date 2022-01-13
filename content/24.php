@@ -14,6 +14,8 @@ Jedeš po hrbolaté cestě, až se před tebou objeví dřevěná brána, která
 <a href="game.php?action=2">Pokračovat na jih</a>
 </div>
 
+<img class="fullsize" src="images/24.png">
+
 <?php
 include 'post.php';
 ?>

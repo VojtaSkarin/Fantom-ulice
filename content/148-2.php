@@ -10,6 +10,8 @@
 include 'fortune-link.php';
 ?>
 
+<img class="fullsize" src="images/car.png">
+
 <?php
 include 'post.php';
 ?>

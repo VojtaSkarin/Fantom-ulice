@@ -40,6 +40,8 @@ TVÝM úkolem je projet divočinou do vzdálené ropné rafinérie v&nbsp;San An
 Před tebou leží mnoho nebezpečí a&nbsp;tvůj úspěch rozhodně není jistý. Čekají tě mocní protivníci a&nbsp;mnohdy se budeš muset rozhodnout, zda zabíjet nebo být zabit.
 </div>
 
+<img class="fullsize" src="images/cover.jpg">
+
 <div class="text">
 Ian Livingstone, spoluzakladatel (se Stevem Jacksonem) úspěšné společnosti Games Workshop a&nbsp;vydavatel časopisu <i>White Dwarf</i>, vytvořil toto napínavé dobrodružství odehrávající se v&nbsp;nepříliš vzdálené budoucnosti. <i>Fantom ulice</i> obsahuje rozšířený soubojový systém s&nbsp;dvojitou Průvodní listinou na zaznamenávání tvých úspěchů a&nbsp;nezdarů. Všechno, co potřebuješ, jsou dvě kostky, tužka a&nbsp;guma.
 </div>
@@ -48,7 +50,9 @@ Ian Livingstone, spoluzakladatel (se Stevem Jacksonem) úspěšné společnosti 
 <i>Ke hraní online verze tužku, gumu, ani šestihrannou kostku nepotřebuješ!</i>
 </div>
 
-<img class="cover" src="images/cover.jpg">
+<img class="fullsize" src="images/other-titles.png">
+
+<img class="fullsize" src="images/dragon-breath.png">
 
 <?php
 include 'feedback.php';

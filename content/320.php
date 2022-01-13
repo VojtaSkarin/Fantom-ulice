@@ -14,6 +14,8 @@ Projektil neškodně vybouchne asi dvacet metrů za tebou, ale víš, že zakrá
 include 'check-condition-link.php';
 ?>
 
+<img class="fullsize" src="images/rifle.png">
+
 <?php
 include 'post.php';
 ?>

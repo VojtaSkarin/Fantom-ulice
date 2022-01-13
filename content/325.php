@@ -14,6 +14,8 @@ Zahodíš revolver do písku vedle sanitky. Vzápětí se ti ve výhledu objeví
 <a href="game.php?action=2">Vrhnout nůž</a>
 </div>
 
+<img class="fullsize" src="images/car.png">
+
 <?php
 include 'post.php';
 ?>

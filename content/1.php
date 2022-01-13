@@ -13,6 +13,8 @@ První věc, která tě udeří do očí, když se rozjedeš po silnici, je rych
 <a href="game.php?action=2">Odjet z města</a>
 </div>
 
+<img class="fullsize" src="images/1.png">
+
 <?php
 include 'post.php';
 ?>

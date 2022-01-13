@@ -44,6 +44,8 @@ Rozhodni tento souboj na život a&nbsp;na smrt podle pravidel pro boj tváří v
 <a href="game.php?action=1">Bojovat se Zvířetem</a>
 </div>
 
+<img class="fullsize" src="images/269.png">
+
 <?php
 include 'post.php';
 ?>

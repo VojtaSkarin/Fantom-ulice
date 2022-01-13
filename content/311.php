@@ -14,6 +14,8 @@ Po několika mílích přijedeš k&nbsp;malému dřevěnému mostu přes nepří
 <a href="game.php?action=2">Vrátit se</a>
 </div>
 
+<img class="fullsize" src="images/311.png">
+
 <?php
 include 'post.php';
 ?>

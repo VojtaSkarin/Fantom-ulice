@@ -10,6 +10,8 @@ Motorka s&nbsp;vozíkem vjedou přímo na bodce a&nbsp;ty prorazí dvě z&nbsp;j
 <a href="game.php?action=1">Otočit na <b>96</b></a>
 </div>
 
+<img class="fullsize" src="images/motorbike.png">
+
 <?php
 include 'post.php';
 ?>

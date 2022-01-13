@@ -14,6 +14,8 @@ Projíždíš kolem sanitky zaparkované vpravo u&nbsp;silnice, ale nevidíš ž
 <a href="game.php?action=2">Jet dál</a>
 </div>
 
+<img class="fullsize" src="images/341.png">
+
 <?php
 include 'post.php';
 ?>

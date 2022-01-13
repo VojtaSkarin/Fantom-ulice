@@ -14,6 +14,8 @@ Brzy necháš kopce za sebou, ale silnice pokračuje dál na západ. O&nbsp;půl
 <a href="game.php?action=2">Bojovat</a>
 </div>
 
+<img class="fullsize" src="images/211.png">
+
 <?php
 include 'post.php';
 ?>

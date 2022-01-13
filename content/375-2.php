@@ -10,6 +10,8 @@ Rozhodneš se vzít si psancův Magnum, protože je účinnější než tvůj re
 <a href="game.php?action=1">Otočit na <b>303</b></a>
 </div>
 
+<img class="fullsize" src="images/rifle.png">
+
 <?php
 include 'post.php';
 ?>

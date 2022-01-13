@@ -14,6 +14,8 @@ Jedeš hlouběji a&nbsp;hlouběji do pouště a&nbsp;barva okolí přechází do
 <a href="game.php?action=2">Jet dál</a>
 </div>
 
+<img class="fullsize" src="images/271.png">
+
 <?php
 include 'post.php';
 ?>

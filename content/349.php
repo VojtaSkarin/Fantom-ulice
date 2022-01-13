@@ -10,6 +10,8 @@ Podaří se ti udeřit strážce tak, že ztratí vědomí. Když se hroutí k&n
 <a href="game.php?action=1">Otočit na <b>198</b></a>
 </div>
 
+<img class="fullsize" src="images/car.png">
+
 <?php
 include 'post.php';
 ?>

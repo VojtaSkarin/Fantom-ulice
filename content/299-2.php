@@ -69,6 +69,8 @@ if ($_SESSION['stamina_ted'] <= 0) {
 }
 ?>
 
+<img class="fullsize" src="images/motorbike.png">
+
 <?php
 include 'post.php';
 ?>

@@ -14,6 +14,8 @@ V&nbsp;obchodě najdeš konzervu s&nbsp;masem, kterou s&nbsp;chutí spořádáš
 <a href="game.php?action=2">Odjet na jih</a>
 </div>
 
+<img class="fullsize" src="images/car.png">
+
 <?php
 include 'post.php';
 ?>

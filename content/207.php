@@ -14,6 +14,8 @@ Projedeš kolem ručně psané tabule, na které stojí: &bdquo;Pete zrychlí v�
 <a href="game.php?action=2">Otočit na <b>88</b></a>
 </div>
 
+<img class="fullsize" src="images/207.png">
+
 <?php
 include 'post.php';
 ?>

@@ -42,6 +42,8 @@ Pokud v&nbsp;tomto souboji vozidel zvítězíš, otoč na <b>91</b>.
 <a href="game.php?action=1">Bojovat s válečným vozem</a>
 </div>
 
+<img class="fullsize" src="images/49.png">
+
 <?php
 include 'post.php';
 ?>

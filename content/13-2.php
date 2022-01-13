@@ -49,6 +49,8 @@ if ($_SESSION['pancir_ted'] <= 0) {
 }
 ?>
 
+<img class="fullsize" src="images/13.png">
+
 <?php
 include 'post.php';
 ?>

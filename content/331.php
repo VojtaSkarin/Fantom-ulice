@@ -44,6 +44,8 @@ Pokud v&nbsp;tomto souboji vozidel zvítězíš, otoč na <b>7</b>.
 <a href="game.php?action=1">Bojovat s&nbsp;džípem</a>
 </div>
 
+<img class="fullsize" src="images/331.png">
+
 <?php
 include 'post.php';
 ?>

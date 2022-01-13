@@ -14,6 +14,8 @@ Stavení je snadné zaměřit a&nbsp;za několik vteřin můžeš stisknout odpa
 <a href="game.php?action=2">Odjet z města</a>
 </div>
 
+<img class="fullsize" src="images/rifle.png">
+
 <?php
 include 'post.php';
 ?>

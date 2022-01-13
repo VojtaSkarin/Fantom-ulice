@@ -44,6 +44,8 @@ Rozhodni tento souboj podle pravidel pro střelbu, ale během prvního kola boje
 <a href="game.php?action=1">Bojovat s psancem</a>
 </div>
 
+<img class="fullsize" src="images/178.png">
+
 <?php
 include 'post.php';
 ?>

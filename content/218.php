@@ -10,6 +10,8 @@ Ačkoli je tvůj spánek velice lehký a&nbsp;probouzíš se při každém šram
 include 'fight-skill-link.php';
 ?>
 
+<img class="fullsize" src="images/218.png">
+
 <?php
 include 'post.php';
 ?>

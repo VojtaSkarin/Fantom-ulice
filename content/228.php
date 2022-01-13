@@ -14,6 +14,8 @@ $_SESSION['podminka'] = in_array('boxer', $_SESSION['vybaveni']);
 include 'check-condition-link.php';
 ?>
 
+<img class="fullsize" src="images/rifle.png">
+
 <?php
 include 'post.php';
 ?>

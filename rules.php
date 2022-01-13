@@ -54,6 +54,8 @@ Procedura používání ŠTĚSTÍ je následující: Hoď dvěma kostkami. Pokud
 Tato procedura se nazývá <i>Zkoušení štěstí</i>. Pokaždé, když <i>zkusíš své štěstí</i>, musíš od hodnoty svého ŠTĚSTÍ odečíst jeden bod. Brzy tedy zjistíš, že čím více se budeš spoléhat na své ŠTĚSTÍ, tím riskantnější to pro tebe bude. Během tvé cesty se může hodnota tvého ŠTĚSTÍ i&nbsp;zvýšit, když budeš mít mimořádné štěstí. Pamatuj si, že tvé ŠTĚSTÍ nikdy nemůže překročit svou <i>výchozí</i> hodnotu.
 </div>
 
+<img class="fullsize" src="images/charter.png">
+
 <div class="title-middle-greater">
 <b>Parametry automobilu</b>
 </div>
@@ -85,6 +87,8 @@ Kromě kulometů a&nbsp;nekonečného množství nábojů do nich je auto vybave
 <div class="text">
 Během cesty můžeš doplňovat palivo a&nbsp;měl by sis ho zaznamenávat do příslušné kolonky v&nbsp;<i>Průvodní listině</i>. Tam si také dělej poznámky o&nbsp;změnách a&nbsp;dalším vybavení tvého auta, které po cestě získáš. Během dobrodružství se hodnota PANCÍŘE může zbyšovat nebo snižovat v&nbsp;důsledku poškození a&nbsp;oprav tvého Interceptoru, ale nikdy nemůže překročit svou <i>výchozí</i> hodnotu.
 </div>
+
+<img class="fullsize" src="images/car-equipment.png">
 
 <div class="title-middle-greater">
 <b>Souboj</b>
@@ -204,6 +208,8 @@ Začni další kolo boje (opakuj kroky 1-6) a&nbsp;pokračuj tak dlouho, dokud P
 <div class="text">
 Pokud se během souboje vozidel rozhodneš místo střelby z&nbsp;kulometu odpálit raketu, můžeš tak učinit před začátkem kteréhokoli kola boje. Nesmíš zapomenout vyškrtnout z&nbsp;<i>Průvodní listiny</i> jednu raketu. Zásah je automatický a&nbsp;zničí každý cíl.
 </div>
+
+<img class="fullsize" src="images/rifle.png">
 
 <div class="title-middle-greater">
 <b>Kredity</b>

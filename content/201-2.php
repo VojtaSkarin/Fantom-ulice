@@ -27,6 +27,8 @@ if ($_SESSION['pancir_ted'] <= 0) {
 }
 ?>
 
+<img class="fullsize" src="images/motorbike.png">
+
 <?php
 include 'post.php';
 ?>

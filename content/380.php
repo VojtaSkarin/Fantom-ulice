@@ -26,6 +26,8 @@ echo "</div>\n";
 <a href="../index.php">Zpět na úvodní obrazovku</a>
 </div>
 
+<img class="fullsize" src="images/380.png">
+
 <?php
 include 'post.php';
 ?>

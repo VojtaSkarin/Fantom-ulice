@@ -42,6 +42,8 @@ Pokud zvítězíš, otoč na <b>249</b>.
 <a href="game.php?action=1">Bojovat s motorkou</a>
 </div>
 
+<img class="fullsize" src="images/motorbike.png">
+
 <?php
 include 'post.php';
 ?>

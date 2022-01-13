@@ -10,6 +10,8 @@ Před tebou je železniční most, pod kterým musíš projet, ale nevšimneš s
 include 'fight-skill-link.php';
 ?>
 
+<img class="fullsize" src="images/car.png">
+
 <?php
 include 'post.php';
 ?>

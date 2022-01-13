@@ -42,6 +42,8 @@ include 'enemy-table.php';
 <a href="game.php?action=1">Bojovat s Fordem</a>
 </div>
 
+<img class="fullsize" src="images/car.png">
+
 <?php
 include 'post.php';
 ?>

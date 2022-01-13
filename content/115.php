@@ -52,6 +52,8 @@ V&nbsp; tomto souboji vozidel na tebe budou v&nbsp;každém kole boje střílet 
 <a href="game.php?action=1">Bojovat s buginami</a>
 </div>
 
+<img class="fullsize" src="images/115.png">
+
 <div class="note">
 1. Nevyjádřeným předmětem je ve větě bugina; použití mužského rodu je zřejmě důsledkem vložení opakujícího se textu.
 </div>
