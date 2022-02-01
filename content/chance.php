@@ -1,4 +1,6 @@
 <?php
+include 'throw-result.php';
+
 echo '<div class="text">';
 if ($_SESSION['vysledek']) {
 	echo 'Máš štěstí.';

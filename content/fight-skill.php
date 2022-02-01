@@ -1,4 +1,10 @@
+<div class="title-main">
+Zkoušení zručnosti
+</div>
+
 <?php
+include 'throw-result.php';
+
 echo '<div class="text">';
 if ($_SESSION['vysledek']) {
 	echo 'Zvládl jsi zareagovat.';

@@ -22,7 +22,8 @@ for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 	$nepritel = $_SESSION['nepritel'][$i];
 	
 	if ((! jeden_nepritel_zije($nepritel) &&
-		 $nepritel['poskozeni'] == 0) ||
+		 $nepritel['poskozeni'] == 0 &&
+		 $nepritel['zpusob_smrti']) ||
 		($_SESSION['utok'] == Utok::Stridave &&
 		 $_SESSION['cil'] != $i)) {
 		continue;
@@ -44,10 +45,14 @@ for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 		}
 		
 	} else {
-		if ($nepritel['byl_cil']) {
-			echo 'S ' . $nepritel['jmeno'][2] . ' jste se navzájem minuli.';
+		if (! $nepritel['zpusob_smrti']) {
+			echo $nepritel['jmeno'][1] . " zničila raketa.\n";
 		} else {
-			echo $nepritel['jmeno'][0] . ' tě minul' . $podst_jmeno[$nepritel['rod']] . '.';
+			if ($nepritel['byl_cil']) {
+				echo 'S ' . $nepritel['jmeno'][2] . ' jste se navzájem minuli.';
+			} else {
+				echo $nepritel['jmeno'][0] . ' tě minul' . $podst_jmeno[$nepritel['rod']] . '.';
+			}
 		}
 	}
 	

@@ -19,21 +19,50 @@ if (ja_ziju()) {
 		($_SESSION['kolo_konec'] == 0 ||
 		 $_SESSION['kolo'] <= $_SESSION['kolo_konec'])) {
 		echo "<div class=\"text\">\n";
-		echo "Na koho chceš zaútočit?\n";
+		echo "Čím a na koho chceš zaútočit?\n";
 		echo "</div>\n";
+		
+		echo "<table class=\"target-choice\">\n";
+		
+		if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
+			echo "<tr>\n";
+			echo "<td>Pálit z kulometu</td>\n";
+			echo "<td>Vystřelit raketu</td>\n";
+			echo "</tr>\n";
+		}
 		
 		for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 			$nepritel = $_SESSION['nepritel'][$i];
+			
+			echo "<tr>\n";
 			
 			if (jeden_nepritel_zije($nepritel) &&
 				($_SESSION['utok'] != Utok::Stridave ||
 				 $_SESSION['pristi_cil'] == $i))
 			{
+				echo "<td>\n";
 				echo "<div class=\"link\">\n";
-				echo "<a href=\"game.php?action=" . ($i + 1) . "\">" . $nepritel['jmeno'][0] . "</a>\n";
+				echo "<a href=\"game.php?action=" . (2 * $i + 1) . "\">" . $nepritel['jmeno'][0] . "</a>\n";
 				echo "</div>\n";
+				echo "</td>\n";
+				
+				if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
+					echo "<td>\n";
+					echo "<div class=\"link\">\n";
+					
+					if ($_SESSION['rakety'] > 0) {
+						echo "<a href=\"game.php?action=" . (2 * $i + 2) . "\">" . $nepritel['jmeno'][0] . "</a>\n";
+					}
+					
+					echo "</div>\n";
+					echo "</td>\n";
+				}
 			}
+			
+			echo "</tr>\n";
 		}
+		
+		echo "</table>\n";
 		
 	} else {
 		if ($_SESSION['kolo_konec'] != 0 &&

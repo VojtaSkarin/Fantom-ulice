@@ -22,6 +22,7 @@ $_SESSION['nepritel'] = [
 		'vydrz_ted' => 7,
 		'vydrz_max' => 7,
 		'poskozeni' => 0,
+		'zpusob_smrti' => true,
 		'byl_cil' => false,
 	],
 	[
@@ -32,6 +33,7 @@ $_SESSION['nepritel'] = [
 		'vydrz_ted' => 8,
 		'vydrz_max' => 8,
 		'poskozeni' => 0,
+		'zpusob_smrti' => true,
 		'byl_cil' => false,
 	],
 ];

@@ -40,7 +40,7 @@ if (array_key_exists('action', $_GET)) {
 	
 	} else if ($action == 'fortune') {
 		if (in_array($_SESSION['stav'], $zkouseni_stesti)) {
-			$hod = rand(1, 6) + rand(1, 6);		
+			$_SESSION['hod'] = $hod = rand(1, 6) + rand(1, 6);		
 			$_SESSION['vysledek'] = $hod <= $_SESSION['stesti_ted'];		
 			$_SESSION['stesti_ted'] = max($_SESSION['stesti_ted'] - 1, 0);
 			
@@ -50,7 +50,7 @@ if (array_key_exists('action', $_GET)) {
 		
 	} else if ($action == 'fortune-noloss') {
 		if (in_array($_SESSION['stav'], $zkouseni_stesti_bez)) {
-			$hod = rand(1, 6) + rand(1, 6);
+			$_SESSION['hod'] = $hod = rand(1, 6) + rand(1, 6);
 			$_SESSION['vysledek'] = $hod <= $_SESSION['stesti_ted'];
 			
 			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-stesti-bez'][1 - (int) $_SESSION['vysledek']];
@@ -59,7 +59,7 @@ if (array_key_exists('action', $_GET)) {
 	
 	} else if ($action == 'fight-skill') {
 		if (in_array($_SESSION['stav'], $zkouseni_umeni_boje)) {
-			$hod = rand(1, 6) + rand(1, 6);
+			$_SESSION['hod'] = $hod = rand(1, 6) + rand(1, 6);
 			$_SESSION['vysledek'] = $hod <= $_SESSION['umeni_boje_ted'];
 			
 			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-um-boje'][1 - (int) $_SESSION['vysledek']];
@@ -81,14 +81,17 @@ if (array_key_exists('action', $_GET)) {
 		
 	} else if ($action == 'chance') {
 		if (in_array($_SESSION['stav'], $zkouseni_nahody)) {
-			$_SESSION['vysledek'] = rand(1, 6) <= $_SESSION['hranice'];
+			$_SESSION['hod'] = $hod = rand(1, 6);
+			$_SESSION['vysledek'] = $hod <= $_SESSION['hranice'];
 			
 			$_SESSION['dalsi-stav'] = $mapa[$_SESSION['stav'] . '-nahoda'][1 - (int) $_SESSION['vysledek']];
 			$_SESSION['stav'] = 'chance';
 		}
 		
 	} else if ($_SESSION['stav'] == 'fight') {
-		$cil = intval($_GET['action']) - 1;
+		$vstup = intval($_GET['action']) - 1;
+		$cil = intdiv($vstup, 2);
+		$typ_utoku = $vstup % 2 == 0;
 		
 		if (ja_ziju()) {
 			if (! libovolny_nepritel_zije() ||
@@ -108,7 +111,10 @@ if (array_key_exists('action', $_GET)) {
 				if (array_key_exists($cil, $_SESSION['nepritel']) &&
 					jeden_nepritel_zije($_SESSION['nepritel'][$cil]) &&
 					($_SESSION['utok'] == Utok::Zaroven ||
-					 $cil == $_SESSION['pristi_cil'])) {
+					 $cil == $_SESSION['pristi_cil']) &&
+					($typ_utoku ||
+					 ($_SESSION['typ_souboje'] == Souboj::Vozidla &&
+					  $_SESSION['rakety'] > 0))) {
 					
 					$_SESSION['cil'] = $_SESSION['pristi_cil'];
 					
@@ -123,6 +129,15 @@ if (array_key_exists('action', $_GET)) {
 							($_SESSION['utok'] == Utok::Stridave &&
 							 $i != $_SESSION['cil'])) {
 							$nepritel['poskozeni'] = 0;
+							$nepritel['zpusob_smrti'] = true;
+							continue;
+						}
+						
+						if (! $typ_utoku) {
+							$nepritel['vydrz_ted'] = 0;
+							$nepritel['poskozeni'] = 0;
+							$nepritel['zpusob_smrti'] = false;
+							$_SESSION['rakety']--;
 							continue;
 						}
 						
@@ -257,7 +272,7 @@ if (array_key_exists('action', $_GET)) {
 		}
 	}
 	
-	header('Location: game.php');
+	//header('Location: game.php');
 	
 } else {
 	include 'content/' . $_SESSION['stav'] . '.php';

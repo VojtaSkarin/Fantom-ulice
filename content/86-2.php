@@ -3,7 +3,7 @@
 </div>
 
 <div class="text">
-Ještě ani nestačíš vytáhnout revolver z&nbsp;pouzdra, když cizinec stiskne spoušť své brokovnice. Zahlédneš obláček dýmu a&nbsp;v&nbsp;tentýž okamžik uvítíš bolest v&nbsp;pravém stejně. Jsi vržen na zeď a&nbsp;když se hroutíš k&nbsp;zemi, zní ti v&nbsp;uších zvuk výstřelu. Hoď jednou kostkou, přičti 2 a&nbsp;výsledek odečti od své STAMINY.
+Ještě ani nestačíš vytáhnout revolver z&nbsp;pouzdra, když cizinec stiskne spoušť své brokovnice. Zahlédneš obláček dýmu a&nbsp;v&nbsp;tentýž okamžik ucítíš bolest v&nbsp;pravém stehně. Jsi vržen na zeď a&nbsp;když se hroutíš k&nbsp;zemi, zní ti v&nbsp;uších zvuk výstřelu. Hoď jednou kostkou, přičti 2 a&nbsp;výsledek odečti od své STAMINY.
 
 <?php
 if ($_SESSION['stamina_ted'] <= 0) {

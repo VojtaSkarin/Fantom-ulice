@@ -116,6 +116,13 @@ table.enemies {
 	margin-bottom: 1rem;
 }
 
+table.target-choice {
+	width: var(--page-width);
+	margin: auto;
+	font-size: var(--font-size);
+	text-align: center;
+}
+
 td.align-center {
 	text-align: center;
 }
