@@ -6,12 +6,15 @@
 $_SESSION['pocet_zasahu'] = 0;
 $_SESSION['utocna_sila_ja_zmena'] = 0;
 $_SESSION['zbran_ja'] = 2;
+$_SESSION['zbran_ja_jmeno_7'] = 'nožem';
 $_SESSION['kolo'] = 1;
 $_SESSION['kolo_konec'] = 0;
 $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 
 $_SESSION['typ_souboje'] = Souboj::Tvari_v_tvar;
 $_SESSION['utok'] = Utok::Stridave;
+$_SESSION['konec'] = Konec::Poskozeni;
+
 $_SESSION['nepritel'] = [
 	[
 		'jmeno' => ['LUPIČ', 'LUPIČE', 'LUPIČEM'],

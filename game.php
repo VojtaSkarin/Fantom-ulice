@@ -159,6 +159,8 @@ if (array_key_exists('action', $_GET)) {
 								$utocne_cislo_ja += 1;
 							}
 						}
+						$nepritel['utocne_cislo_ja'] = $utocne_cislo_ja;
+						$nepritel['utocne_cislo_protivnik'] = $utocne_cislo_protivnik;
 						
 						if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar) {
 							if ($utocne_cislo_ja > $utocne_cislo_protivnik) {
@@ -272,7 +274,7 @@ if (array_key_exists('action', $_GET)) {
 		}
 	}
 	
-	//header('Location: game.php');
+	header('Location: game.php');
 	
 } else {
 	include 'content/' . $_SESSION['stav'] . '.php';

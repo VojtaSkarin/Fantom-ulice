@@ -74,7 +74,6 @@ div.text {
 div.note {
 	max-width: var(--page-width);
 	margin: auto;
-	margin-bottom: 1rem;
 	margin-top: 1rem;
 	text-align: justify;
 	font-size: 75%;

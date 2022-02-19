@@ -7,6 +7,7 @@ $_SESSION['pocet_zasahu'] = 0;
 $_SESSION['utocna_sila_ja_zmena'] = -2;
 $_SESSION['utocna_sila_ja_zmena_kola'] = [];
 $_SESSION['zbran_ja'] = 0;
+$_SESSION['zbran_ja_jmeno_7'] = '';
 $_SESSION['kolo'] = 1;
 $_SESSION['kolo_konec'] = 0;
 $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
@@ -14,6 +15,8 @@ $_SESSION['pristi_cil'] = 0;
 
 $_SESSION['typ_souboje'] = Souboj::Vozidla;
 $_SESSION['utok'] = Utok::Stridave;
+$_SESSION['konec'] = Konec::Smrt;
+
 $_SESSION['nepritel'] = [
 	[
 		'jmeno' => ['OBRNĚNÝ VŮZ', 'OBRNĚNÝ VŮZ', 'OBRNĚNÝM VOZEM'],

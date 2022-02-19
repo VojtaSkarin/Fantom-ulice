@@ -23,13 +23,20 @@ if (ja_ziju()) {
 		echo "</div>\n";
 		
 		echo "<table class=\"target-choice\">\n";
+		echo "<tr>\n";
 		
 		if ($_SESSION['typ_souboje'] == Souboj::Vozidla) {
-			echo "<tr>\n";
 			echo "<td>Pálit z kulometu</td>\n";
 			echo "<td>Vystřelit raketu</td>\n";
-			echo "</tr>\n";
+			
+		} else if ($_SESSION['typ_souboje'] == Souboj::Tvari_v_tvar) {
+			echo "<td>Zaútočit " . $_SESSION['zbran_ja_jmeno_7'] . "</td>\n";
+			
+		} else if ($_SESSION['typ_souboje'] == Souboj::Strelba) {
+			echo "<td>Vystřelit</td>\n";
 		}
+		
+		echo "</tr>\n";
 		
 		for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 			$nepritel = $_SESSION['nepritel'][$i];

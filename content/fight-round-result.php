@@ -1,3 +1,7 @@
+<div class="title-main">
+Výsledek kola
+</div>
+
 <?php
 $zajmeno = [
 	true => 'mu',
@@ -29,7 +33,18 @@ for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 		continue;
 	}
 	
+	echo "<div class=\"title-middle\">\n";
+	echo $nepritel['jmeno'][0] . "\n";
+	echo "</div>\n";
+
 	echo "<div class=\"text\">\n";
+	
+	if ($nepritel['zpusob_smrti']) {
+		echo "Tvoje útočné číslo: " . $nepritel['utocne_cislo_ja'] . "\n";
+		echo "<br>\n";
+		echo "Protivníkovo útočné číslo: " . $nepritel['utocne_cislo_protivnik'] . "\n";
+		echo "<br>\n";
+	}
 	
 	if ($nepritel['poskozeni'] > 0) {
 		if (in_array($_SESSION['typ_souboje'], $souboje_vozidel)) {
@@ -47,6 +62,7 @@ for ($i = 0; $i < count($_SESSION['nepritel']); $i++) {
 	} else {
 		if (! $nepritel['zpusob_smrti']) {
 			echo $nepritel['jmeno'][1] . " zničila raketa.\n";
+			
 		} else {
 			if ($nepritel['byl_cil']) {
 				echo 'S ' . $nepritel['jmeno'][2] . ' jste se navzájem minuli.';

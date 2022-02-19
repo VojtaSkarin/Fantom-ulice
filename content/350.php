@@ -6,7 +6,8 @@
 $_SESSION['pocet_zasahu'] = 0;
 $_SESSION['utocna_sila_ja_zmena'] = 0;
 $_SESSION['utocna_sila_ja_zmena_kola'] = [];
-$_SESSION['zbran_ja'] = 0;
+$_SESSION['zbran_ja'] = 2;
+$_SESSION['zbran_ja_jmeno_7'] = 'nožem';
 $_SESSION['kolo'] = 1;
 $_SESSION['kolo_konec'] = 0;
 $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
@@ -14,12 +15,14 @@ $_SESSION['pristi_cil'] = 0;
 
 $_SESSION['typ_souboje'] = Souboj::Tvari_v_tvar;
 $_SESSION['utok'] = Utok::Stridave;
+$_SESSION['konec'] = Konec::Smrt;
+
 $_SESSION['nepritel'] = [
 	[
-		'jmeno' => ['DIVOKÝ PES', 'DIVOKÉHO PSA', 'DIVOKÁM PSEM'],
+		'jmeno' => ['DIVOKÝ PES', 'DIVOKÉHO PSA', 'DIVOKÝM PSEM'],
 		'rod' => true,
 		'utocna_sila' => 7,
-		'zbran' => 0,
+		'zbran' => 2,
 		'vydrz_ted' => 5,
 		'vydrz_max' => 5,
 		'poskozeni' => 0,

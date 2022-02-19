@@ -85,7 +85,7 @@ Kromě kulometů a&nbsp;nekonečného množství nábojů do nich je auto vybave
 </div>
 
 <div class="text">
-Během cesty můžeš doplňovat palivo a&nbsp;měl by sis ho zaznamenávat do příslušné kolonky v&nbsp;<i>Průvodní listině</i>. Tam si také dělej poznámky o&nbsp;změnách a&nbsp;dalším vybavení tvého auta, které po cestě získáš. Během dobrodružství se hodnota PANCÍŘE může zbyšovat nebo snižovat v&nbsp;důsledku poškození a&nbsp;oprav tvého Interceptoru, ale nikdy nemůže překročit svou <i>výchozí</i> hodnotu.
+Během cesty můžeš doplňovat palivo a&nbsp;měl by sis ho zaznamenávat do příslušné kolonky v&nbsp;<i>Průvodní listině</i>. Tam si také dělej poznámky o&nbsp;změnách a&nbsp;dalším vybavení tvého auta, které po cestě získáš. Během dobrodružství se hodnota PANCÍŘE může zvyšovat nebo snižovat v&nbsp;důsledku poškození a&nbsp;oprav tvého Interceptoru, ale nikdy nemůže překročit svou <i>výchozí</i> hodnotu.
 </div>
 
 <img class="fullsize" src="images/car-equipment.png">
