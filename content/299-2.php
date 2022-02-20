@@ -9,7 +9,7 @@ $_SESSION['utocna_sila_ja_zmena_kola'] = [];
 $_SESSION['zbran_ja'] = 0;
 $_SESSION['zbran_ja_jmeno_7'] = '';
 $_SESSION['kolo'] = 1;
-$_SESSION['kolo_konec'] = 4;
+$_SESSION['kolo_konec'] = 0;
 $_SESSION['stamina_zacatek_souboje'] = $_SESSION['stamina_ted'];
 $_SESSION['pristi_cil'] = 0;
 
@@ -65,7 +65,7 @@ if ($_SESSION['stamina_ted'] <= 0) {
 	include 'enemy-table.php';
 
 	echo "<div class=\"text\">\n";
-	echo "V&nbsp;tomto souboji (podle pravidel pro střelbu) na tebe budou v&nbsp;každém kole boje střílet oba motorkáři, ale ty se musíš vybrat, na kterého z&nbsp;nich budeš střílet ty. Proti druhému si budeš házet na Útočné číslo jako obvykle, ale bude-li tvé Útočné číslo větší, nezraníš ho - znamená to jen, že tě jeho kulka minula. Pokud zvítězíš, otoč na <b>97</b>, ale pokud jsi byl v&nbsp;tomto souboji zasažen více než jedenkrát, sniž natrvalo své UMĚNÍ BOJE o&nbsp;1.\n";
+	echo "V&nbsp;tomto souboji (podle pravidel pro střelbu) na tebe budou v&nbsp;každém kole boje střílet oba motorkáři, ale ty si musíš vybrat, na kterého z&nbsp;nich budeš střílet ty. Proti druhému si budeš házet na Útočné číslo jako obvykle, ale bude-li tvé Útočné číslo větší, nezraníš ho - znamená to jen, že tě jeho kulka minula. Pokud zvítězíš, otoč na <b>97</b>, ale pokud jsi byl v&nbsp;tomto souboji zasažen více než jedenkrát, sniž natrvalo své UMĚNÍ BOJE o&nbsp;1.\n";
 	echo "</div>\n";
 	echo "\n";
 	echo "<div class=\"link\">\n";

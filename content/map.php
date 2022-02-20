@@ -78,7 +78,8 @@ $mapa = [
 	'30' => ['30-2'],
 	'30-2' => [],
 	'30-2-kdo-z-koho' => ['74', '226'],
-	'31' => ['262', '353'],
+	'31' => ['31-2'],
+	'31-2' => ['262', '353'],
 	'32' => [],
 	'32-stesti' => ['76', '160'],
 	'33' => ['33-2'],
@@ -494,8 +495,9 @@ $mapa = [
 	'293-podminka' => ['56', '125'],
 	'294' => ['fight'],
 	'294-boj' => ['334'],
-	'295' => [],
-	'295-stesti' => ['122', '329'],
+	'295' => ['295-2'],
+	'295-2' => [],
+	'295-2-stesti' => ['122', '329'],
 	'296' => [],
 	'296-podminka' => ['174', '263'],
 	'297' => ['297-2'],
@@ -514,7 +516,8 @@ $mapa = [
 	'305' => ['216'],
 	'306' => ['306-2'],
 	'306-2' => ['118'],
-	'307' => ['206', '346'],
+	'307' => ['307-2'],
+	'307-2' => ['206', '346'],
 	'308' => ['286'],
 	'309' => ['157', '45'],
 	'310' => ['310-2'],
@@ -642,18 +645,20 @@ $zkouseni_stesti = [
 	'142',
 	'147',
 	'148',
+	'157',
 	'182',
 	'190',
 	'219',
 	'221',
 	'255',
 	'273',
-	'295',
+	'295-2',
 	'304',
 	'312',
 	'318',
 	'332',
 	'335',
+	'338',
 	'347',
 ];
 
@@ -708,6 +713,7 @@ $zkouseni_podminky = [
 	'293',
 	'296',
 	'313',
+	'320',
 	'339',
 	'351',
 ];
@@ -766,9 +772,15 @@ $podminky = [
 	'78' => ['ma_rakety'],
 	'86-2' => ['ma_medkit'],
 	'109' => [function () { return in_array('páčidlo', $_SESSION['vybaveni']); }],
+	'112-2' => ['nenavstivil_rockville_dum'],
 	'128' => ['ma_bodce', 'ma_olej'],
+	'185-2' => ['nenavstivil_rockville_pokoj_pravy'],
 	'203' => ['ma_rakety'],
+	'233-2' => ['nenavstivil_rockville_pokoj_levy'],
+	'246' => ['nenavstivil_rockville_obchod'],
+	'252' => ['nenavstivil_rockville_pokoj_levy', 'nenavstivil_rockville_pokoj_pravy'],
 	'259' => [function () { return $_SESSION['kredity'] >= 200; }],
+	'262-2' => ['nenavstivil_rockville_obchod', 'nenavstivil_rockville_dum'],
 	'340' => ['ma_bodce', 'ma_olej'],
 ];
 
@@ -776,4 +788,8 @@ function ma_bodce() { return $_SESSION['bodce'] > 0; }
 function ma_olej() { return $_SESSION['olej'] > 0; }
 function ma_rakety() { return $_SESSION['rakety'] > 0; }
 function ma_medkit() { return $_SESSION['medkit'] > 0; }
+function nenavstivil_rockville_obchod() { return ! in_array('_Rockville_obchod', $_SESSION['vybaveni']); }
+function nenavstivil_rockville_pokoj_levy() { return ! in_array('_Rockville_pokoj_levy', $_SESSION['vybaveni']); }
+function nenavstivil_rockville_pokoj_pravy() { return ! in_array('_Rockville_pokoj_pravy', $_SESSION['vybaveni']); }
+function nenavstivil_rockville_dum() { return nenavstivil_rockville_pokoj_levy() ||	nenavstivil_rockville_pokoj_pravy; }
 ?>

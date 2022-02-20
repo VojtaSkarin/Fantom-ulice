@@ -3,7 +3,7 @@
 </div>
 
 <div class="text">
-Když se přiblížíš ke stavení, zahlédneš další osňující záblesk; z&nbsp;okna v&nbsp;prvním patře vystřelila bazuka. Prudce uhneš doleva, aby ses výbušné střele vyhnul. <i>Zkus své štěstí.</i> Pokud máš štěstí, otoč na <b>32</b>. Máš-li smůlu, otoč na <b>105</b>.
+Když se přiblížíš ke stavení, zahlédneš další osňující záblesk; z&nbsp;okna v&nbsp;prvním patře vystřelila bazuka. Prudce uhneš doleva, aby ses výbušné střele vyhnul. <i>Zkus své štěstí.</i> Pokud máš štěstí, otoč na <b>320</b>. Máš-li smůlu, otoč na <b>105</b>.
 </div>
 
 <?php

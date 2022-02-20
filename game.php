@@ -273,7 +273,7 @@ if (array_key_exists('action', $_GET)) {
 			}
 		}
 	}
-	
+
 	header('Location: game.php');
 	
 } else {

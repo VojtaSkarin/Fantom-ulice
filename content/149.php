@@ -3,7 +3,7 @@
 </div>
 
 <div class="text">
-Cesta vede dlouho rovně a&nbsp;jede se ti celkem pohodlně, protože je na ní málo opuštěných aut. Po několika hodinách rychlé jízdy dorazíš na rozcestí. Pokud chceš pokračovat v&nbsp;cestě na jih, otoč na <b>255</b>. Pokud raději odbočíš doleva a&nbsp;zamíříš na východ, otoč na <b>114</b>.
+Cesta vede dlouho rovně a&nbsp;jede se ti celkem pohodlně, protože je na ní málo opuštěných aut. Po několika hodinách rychlé jízdy dorazíš na rozcestí. Pokud chceš pokračovat v&nbsp;cestě na jih, otoč na <b>225</b>. Pokud raději odbočíš doleva a&nbsp;zamíříš na východ, otoč na <b>114</b>.
 </div>
 
 <div class="link">
